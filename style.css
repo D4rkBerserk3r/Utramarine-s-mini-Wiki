@@ -1,0 +1,190 @@
+/* --- COGITATOR CORE SYSTEM --- */
+:root {
+    --ultra-glow: #00FF99;
+    --ultra-bg: rgba(0, 15, 10, 0.9); /* Darker green-tinted black */
+    --ultra-font: 'Share Tech Mono', monospace;
+    --ultra-border: 1px solid var(--ultra-glow);
+    --scanline: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 255, 153, 0.05) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.02), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.02));
+}
+
+body {
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    margin: 0;
+    font: 16px var(--ultra-font);
+    color: var(--ultra-glow);
+    overflow-x: hidden;
+}
+.bg-home {
+    background-image: url('https://artwork.40k.gallery/wp-content/uploads/2023/04/Ultramarines.jpg');
+}
+.bg-primarch {
+    background-image: url('https://artwork.40k.gallery/wp-content/uploads/2021/11/firat-solhan-roboute-guilliman.jpg');
+}
+
+/* --- THE SCANLINE OVERLAY (The Secret Ingredient) --- */
+body::before {
+    content: " ";
+    display: block;
+    position: fixed;
+    top: 0; left: 0; bottom: 0; right: 0;
+    background: var(--scanline);
+    background-size: 100% 4px, 3px 100%;
+    z-index: 9999;
+    pointer-events: none; /* Allows clicking through the lines */
+}
+
+/* --- THE COGITATOR MENU --- */
+.codex-menu {
+    width: 280px;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background: var(--ultra-bg);
+    border: var(--ultra-border);
+    z-index: 100;
+    box-shadow: 0 0 15px rgba(0, 255, 153, 0.3);
+    backdrop-filter: blur(5px);
+}
+
+.menu-header {
+    display: block;
+    padding: 15px;
+    background: rgba(0, 255, 153, 0.1);
+    cursor: pointer;
+    text-transform: uppercase;
+    border-bottom: var(--ultra-border);
+    font-weight: bold;
+}
+
+.menu-content a {
+    color: var(--ultra-glow);
+    text-decoration: none;
+    display: block;
+    padding: 12px 20px;
+    border-bottom: 1px solid rgba(0, 255, 153, 0.1);
+}
+
+.menu-content a:hover {
+    background: var(--ultra-glow);
+    color: #000;
+}
+
+.menu-toggle { display: none; }
+.menu-toggle:checked ~ .menu-content { max-height: 500px; }
+.menu-content { max-height: 0; overflow: hidden; transition: 0.4s; }
+
+/* --- THE MAIN DATA-SLATE BOX --- */
+.container {
+    padding: 20px 20px 20px 320px; /* Room for fixed menu */
+    min-height: 100vh;
+}
+
+.data-slate {
+    background: var(--ultra-bg);
+    border: var(--ultra-border);
+    padding: 40px;
+    max-width: 1000px;
+    width:90%;
+    box-shadow: 0 0 20px rgba(0, 255, 153, 0.15);
+    backdrop-filter: blur(5px);
+    position: relative;
+}
+
+/* Glowing Title Effect */
+h1 {
+    font-size: 2.5em;
+    margin-top: 0;
+    text-transform: uppercase;
+    border-bottom: var(--ultra-border);
+    padding-bottom: 10px;
+    text-shadow: 0 0 10px var(--ultra-glow);
+}
+
+p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+.data-slate a {
+    color: var(--ultra-glow);
+    text-decoration: none;
+    border-bottom: 1px dashed var(--ultra-glow);
+    transition: 0.3s;
+}
+
+.data-slate a:hover {
+    background: var(--ultra-glow);
+    color: #000;
+    box-shadow: 0 0 10px var(--ultra-glow);
+}
+
+/* --- OVERLAY INITIALIZATION --- */
+#notifica-nero {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: black;
+    z-index: 999999;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+/* --- free space between articles --- */
+.freespace {
+  display: flex;
+  flex-direction: column;
+  gap: 90px; /* Precise control over the space between items */
+ /* Shared background */
+}
+/* --- setup images at the right of the articles --- */
+.slate-image-right {
+    float: right;
+    width: 40%;          /* Uses a percentage so it fits inside the slate */
+    max-width: 400px
+    margin-left: 20px;  /* Space between text and image */
+    margin-bottom: 10px;
+    border: var(--ultra-border);
+    box-shadow: 0 0 10px rgba(0, 255, 153, 0.2);
+    /filter: brightness(0.8) sepia(1) hue-rotate(100deg) saturate(3);/
+}
+
+.video-aspect-ratio {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* Magic number for 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    border: var(--ultra-border);
+    background: #000;
+    box-shadow: 0 0 15px var(--ultra-glow);
+    margin-bottom: 15px;
+    z-index: 10;
+}
+
+/* This forces the YouTube player to fill that container */
+.video-aspect-ratio iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.video-footer {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 0.8em;
+    color: var(--ultra-glow);
+    text-align: right;
+    text-transform: uppercase;
+}
+.status-blink {
+    color: #ff3333;
+    animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+    50% { opacity: 0; }
+}
