@@ -142,7 +142,7 @@ p {
 .slate-image-right {
     float: right;
     width: 40%;          /* Uses a percentage so it fits inside the slate */
-    max-width: 400px
+    max-width: 400px;
     margin-left: 20px;  /* Space between text and image */
     margin-bottom: 10px;
     border: var(--ultra-border);
