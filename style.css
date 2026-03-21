@@ -17,14 +17,10 @@ body {
     overflow-x: hidden;
 }
 .bg-home {
-    background-image: url('https://picsum.photos/1920/1080');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    min-height: 100vh;
+    background-image: url('');
 }
 .bg-primarch {
-    background-image: url('https://artwork.40k.gallery/wp-content/uploads/2021/11/firat-solhan-roboute-guilliman.jpg');
+    background-image: url('');
 }
 
 /* --- THE SCANLINE OVERLAY (The Secret Ingredient) --- */
