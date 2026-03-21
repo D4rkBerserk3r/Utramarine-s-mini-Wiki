@@ -18,6 +18,10 @@ body {
 }
 .bg-home {
     background-image: url('https://artwork.40k.gallery/wp-content/uploads/2023/04/Ultramarines.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
 }
 .bg-primarch {
     background-image: url('https://artwork.40k.gallery/wp-content/uploads/2021/11/firat-solhan-roboute-guilliman.jpg');
