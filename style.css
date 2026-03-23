@@ -140,12 +140,12 @@ p {
 }
 /* --- setup images at the right of the articles --- */
 .slate-image-right {
-    display: block;      /* Takes up its own line */
-    margin: 20px auto;   /* Centers horizontally with space top/bottom */
-    width: 80%;          /* Significantly bigger */
-    max-width: 800px;    /* Prevents it from getting absurdly huge on wide screens */
+  display: block;      /* Takes up its own line to allow centering */
+    margin: 30px auto;   /* Perfect horizontal centering with vertical spacing */
+    width: 80%;          /* Significantly expands it to fill the slate */
+    max-width: 900px;    /* Prevents it from getting too big on huge monitors */
     border: var(--ultra-border);
-    box-shadow: 0 0 15px rgba(0, 255, 153, 0.3);
+    box-shadow: 0 0 20px rgba(0, 255, 153, 0.4); /* Intense glow */
 }
 
 .video-aspect-ratio {
