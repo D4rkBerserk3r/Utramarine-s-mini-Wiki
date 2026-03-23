@@ -203,7 +203,30 @@ body.bg-primarch .video-aspect-ratio {
     border-color: var(--ultra-blue) !important;
     box-shadow: 0 0 20px var(--ultra-blue-glow) !important;
 }
+/* --- PRIMARCH MENU SPECIFIC FIX --- */
 
+/* 1. Target the links inside the menu specifically */
+body.bg-primarch .menu-content a {
+    color: var(--ultra-blue) !important;
+    border-bottom: 1px solid rgba(0, 94, 184, 0.2);
+}
+
+/* 2. Target the link hover state */
+body.bg-primarch .menu-content a:hover {
+    background: var(--ultra-blue) !important;
+    color: white !important; /* White text looks better on blue background */
+    box-shadow: 0 0 10px var(--ultra-blue);
+}
+
+/* 3. Target the Menu Header text */
+body.bg-primarch .menu-header {
+    color: var(--ultra-blue) !important;
+}
+
+/* 4. Target the glowing border of the menu box itself */
+body.bg-primarch .codex-menu {
+    border: 1px solid var(--ultra-blue) !important;
+}
 /* Change Titles to Gold (Optional, but looks very Ultramarine) */
 body.bg-primarch h1, 
 body.bg-primarch h2 {
