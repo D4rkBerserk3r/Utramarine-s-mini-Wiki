@@ -17,10 +17,10 @@ body {
     overflow-x: hidden;
 }
 .bg-index {
-    background-image: url('index-bg.jpg');
+    background-image: url('images/index-bg.jpg');
 }
 .bg-primarch {
-    background-image: url('guilliman-bg.jpg');
+    background-image: url('images/guilliman-bg.jpg');
 }
 
 /* --- THE SCANLINE OVERLAY (The Secret Ingredient) --- */
