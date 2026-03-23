@@ -140,14 +140,12 @@ p {
 }
 /* --- setup images at the right of the articles --- */
 .slate-image-right {
-    float: right;
-    width: 40%;          /* Uses a percentage so it fits inside the slate */
-    max-width: 400px;
-    margin-left: 20px;  /* Space between text and image */
-    margin-bottom: 10px;
+    display: block;      /* Takes up its own line */
+    margin: 20px auto;   /* Centers horizontally with space top/bottom */
+    width: 80%;          /* Significantly bigger */
+    max-width: 800px;    /* Prevents it from getting absurdly huge on wide screens */
     border: var(--ultra-border);
-    box-shadow: 0 0 10px rgba(0, 255, 153, 0.2);
-    /filter: brightness(0.8) sepia(1) hue-rotate(100deg) saturate(3);/
+    box-shadow: 0 0 15px rgba(0, 255, 153, 0.3);
 }
 
 .video-aspect-ratio {
