@@ -16,11 +16,11 @@ body {
     color: var(--ultra-glow);
     overflow-x: hidden;
 }
-.bg-home {
-    background-image: url('https://artwork.40k.gallery/wp-content/uploads/2023/04/Ultramarines.jpg');
+.bg-index {
+    background-image: url('index-bg.jpg');
 }
 .bg-primarch {
-    background-image: url('');
+    background-image: url('guilliman-bg.jpg');
 }
 
 /* --- THE SCANLINE OVERLAY (The Secret Ingredient) --- */
