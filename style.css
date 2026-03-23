@@ -5,6 +5,9 @@
     --ultra-font: 'Share Tech Mono', monospace;
     --ultra-border: 1px solid var(--ultra-glow);
     --scanline: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 255, 153, 0.05) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.02), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.02));
+    --ultra-blue: #005EB8;      /* The Macragge Blue */
+    --ultra-gold: #C39133;      /* The Golden Aquila */
+    --ultra-blue-glow: rgba(0, 94, 184, 0.5);
 }
 
 body {
@@ -185,4 +188,37 @@ p {
 
 @keyframes blinker {
     50% { opacity: 0; }
+}
+/* --- PRIMARCH THEME OVERRIDE --- */
+body.bg-primarch {
+    color: var(--ultra-blue); /* Changes all text to Blue */
+}
+
+/* Change Borders and Glows for the Primarch Page */
+body.bg-primarch .data-slate, 
+body.bg-primarch .codex-menu,
+body.bg-primarch .menu-header,
+body.bg-primarch .slate-image-right,
+body.bg-primarch .video-aspect-ratio {
+    border-color: var(--ultra-blue) !important;
+    box-shadow: 0 0 20px var(--ultra-blue-glow) !important;
+}
+
+/* Change Titles to Gold (Optional, but looks very Ultramarine) */
+body.bg-primarch h1, 
+body.bg-primarch h2 {
+    color: var(--ultra-gold);
+    text-shadow: 0 0 10px rgba(195, 145, 51, 0.5);
+    border-bottom: 1px solid var(--ultra-gold);
+}
+
+/* Change the Scanline Overlay to Blue tint */
+body.bg-primarch::before {
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 94, 184, 0.1) 50%);
+}
+
+/* Change Menu Links on Hover */
+body.bg-primarch .menu-content a:hover {
+    background: var(--ultra-blue);
+    color: white;
 }
