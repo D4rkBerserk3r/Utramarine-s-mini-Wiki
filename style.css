@@ -245,3 +245,75 @@ body.bg-primarch .menu-content a:hover {
     background: var(--ultra-blue);
     color: white;
 }
+:root {
+    --ultra-blue: #005eb8;
+    --ultra-dark: #0a1a2f;
+    --ultra-gold: #c39133;
+    --ultra-light: #dbe9ff;
+}
+
+/* Table Container */
+body.bg-primarch .ultra-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: rgba(10, 26, 47, 0.85);
+    border: 1px solid var(--ultra-blue);
+    box-shadow: 0 0 15px rgba(0, 94, 184, 0.4);
+    font-family: "Segoe UI", Tahoma, sans-serif;
+    color: var(--ultra-light);
+}
+
+/* Table Header */
+body.bg-primarch .ultra-table thead {
+    background: linear-gradient(90deg, var(--ultra-blue), #003f7f);
+}
+
+body.bg-primarch .ultra-table thead th {
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 12px;
+    border-bottom: 2px solid var(--ultra-gold);
+}
+
+/* Table Rows */
+body.bg-primarch .ultra-table tbody tr {
+    transition: all 0.2s ease-in-out;
+}
+
+body.bg-primarch .ultra-table tbody tr:nth-child(even) {
+    background: rgba(0, 94, 184, 0.08);
+}
+
+/* Hover Effect */
+body.bg-primarch .ultra-table tbody tr:hover {
+    background: rgba(0, 94, 184, 0.25);
+    box-shadow: inset 0 0 10px rgba(0, 94, 184, 0.6);
+}
+
+/* Table Cells */
+body.bg-primarch .ultra-table td {
+    padding: 10px;
+    border-bottom: 1px solid rgba(0, 94, 184, 0.2);
+}
+
+/* First Column (Wargear Names) */
+body.bg-primarch .ultra-table td:first-child {
+    color: var(--ultra-gold);
+    font-weight: bold;
+}
+
+/* Subtle Glow for Important Relics */
+body.bg-primarch .ultra-table td strong {
+    color: var(--ultra-gold);
+    text-shadow: 0 0 6px rgba(195, 145, 51, 0.6);
+}
+
+/* Optional Caption Styling */
+body.bg-primarch .ultra-table caption {
+    caption-side: top;
+    padding: 10px;
+    font-size: 1.2em;
+    color: var(--ultra-gold);
+    text-shadow: 0 0 8px rgba(195, 145, 51, 0.5);
+}
