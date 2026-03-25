@@ -138,7 +138,7 @@ p {
 .freespace {
   display: flex;
   flex-direction: column;
-  gap: 90px; /* Precise control over the space between items */
+  gap: 80px; /* Precise control over the space between items */
  /* Shared background */
 }
 /* --- setup images at the right of the articles --- */
