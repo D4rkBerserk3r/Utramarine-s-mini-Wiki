@@ -255,8 +255,8 @@ body.bg-primarch .ultra-table {
     background: rgba(10, 26, 47, 0.85);
     border: 1px solid var(--ultra-blue);
     box-shadow: 0 0 15px rgba(0, 94, 184, 0.4);
-    font-family: "Segoe UI", Tahoma, sans-serif;
-    color: var(--ultra-blue);
+    font: 16px var(--ultra-font);
+    color: var(--ultra-blue-glow);
 }
 
 /* Table Header */
