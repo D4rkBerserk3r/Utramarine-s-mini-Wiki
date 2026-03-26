@@ -250,7 +250,7 @@ body.bg-primarch .menu-content a:hover {
 body.bg-primarch .ultra-table th, 
 body.bg-primarch .ultra-table td {
     font-family: var(--ultra-font);
-    background: var(--scanline);
+    background: var(--ultra-bg);
 }
 /* Table Container */
 body.bg-primarch .ultra-table {
