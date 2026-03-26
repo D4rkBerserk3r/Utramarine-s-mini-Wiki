@@ -247,7 +247,10 @@ body.bg-primarch .menu-content a:hover {
     background: var(--ultra-blue);
     color: white;
 }
-
+body.bg-primarch .ultra-table th, 
+body.bg-primarch .ultra-table td {
+    font-family: var(--ultra-font);
+}
 /* Table Container */
 body.bg-primarch .ultra-table {
     width: 100%;
@@ -255,7 +258,7 @@ body.bg-primarch .ultra-table {
     background: rgba(10, 26, 47, 0.85);
     border: 1px solid var(--ultra-blue);
     box-shadow: 0 0 15px rgba(0, 94, 184, 0.4);
-    font: 16px var(--ultra-font);
+    font-family: var(--ultra-font);
     color: var(--ultra-blue-glow);
 }
 
@@ -313,3 +316,4 @@ body.bg-primarch .ultra-table caption {
     color: var(--ultra-gold);
     text-shadow: 0 0 8px rgba(195, 145, 51, 0.5);
 }
+
