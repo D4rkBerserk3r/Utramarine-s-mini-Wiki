@@ -269,7 +269,7 @@ body.bg-primarch .ultra-table thead {
 }
 
 body.bg-primarch .ultra-table thead th {
-    color: white;
+    color: var(--ultra-blue);
     text-transform: uppercase;
     letter-spacing: 1px;
     padding: 12px;
