@@ -205,16 +205,33 @@ body.bg-primarch .video-aspect-ratio {
     border-color: var(--ultra-blue) !important;
     box-shadow: 0 0 20px var(--ultra-blue-glow) !important;
 }
-body.bg-primarch p {
-    color: var(--ultra-blue) !important;
-}
 
 /* Optional: Keep the Menu links in this same light blue */
 body.bg-primarch .menu-content a {
     color: var(--ultra-font-blue) !important;
 }
-/* --- PRIMARCH MENU SPECIFIC FIX --- */
+/* --- PRIMARCH CONTENT ONLY --- */
 
+/* Target only the 'content' text: Paragraphs, Lists, and Tables */
+body.bg-primarch p, 
+body.bg-primarch li, 
+body.bg-primarch td {
+    color: var(--ultra-blue) !important;
+}
+
+/* Ensure the Article Titles stay Gold */
+body.bg-primarch h2, 
+body.bg-primarch h3 {
+    color: var(--ultra-gold) !important;
+    text-shadow: 0 0 10px rgba(195, 145, 51, 0.4) !important;
+    border-bottom: 2px solid var(--ultra-gold) !important;
+}
+
+/* Reset the Main H1 Title to the Original (Green or Gold) */
+body.bg-primarch h1 {
+    /* If you want it Gold like the other titles: */
+    color: var(--ultra-gold) !important;
+/* --- PRIMARCH MENU SPECIFIC FIX --- */
 /* 1. Target the links inside the menu specifically */
 body.bg-primarch .menu-content a {
     color: var(--ultra-blue) !important;
