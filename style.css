@@ -5,7 +5,7 @@
     --ultra-font: 'Share Tech Mono', monospace;
     --ultra-border: 1px solid var(--ultra-glow);
     --scanline: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 255, 153, 0.05) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.02), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.02));
-    --ultra-blue: #4D9FFF;      /* The Macragge Blue */
+    --ultra-blue: #79c0ff;      /* The Macragge Blue */
     --ultra-gold: #C39133;      /* The Golden Aquila */
     --ultra-blue-glow: rgba(0, 94, 184, 0.5);
     --ultra-dark: #0a1a2f;
@@ -204,6 +204,16 @@ body.bg-primarch .slate-image-right,
 body.bg-primarch .video-aspect-ratio {
     border-color: var(--ultra-blue) !important;
     box-shadow: 0 0 20px var(--ultra-blue-glow) !important;
+}
+body.bg-primarch p, 
+body.bg-primarch li, 
+body.bg-primarch td {
+    color: var(--ultra-blue) !important;
+}
+
+/* Optional: Keep the Menu links in this same light blue */
+body.bg-primarch .menu-content a {
+    color: var(--ultra-font-blue) !important;
 }
 /* --- PRIMARCH MENU SPECIFIC FIX --- */
 
