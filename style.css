@@ -224,15 +224,19 @@ body.bg-primarch::before {
 /* 3. THE MENU (BLUE SYSTEM) */
 body.bg-primarch .codex-menu {
     border: 1px solid #005EB8 !important;
+    box-shadow: 0 0 15px rgba(0, 94, 184, 0.5) !important;
 }
 
 body.bg-primarch .menu-header {
     color: #005EB8 !important;
+    border-bottom: 1px solid #005EB8 !important; /* This fixes the green line! */
+    text-shadow: 0 0 5px rgba(0, 94, 184, 0.5) !important;
 }
 
 body.bg-primarch .menu-content a {
     color: #79C0FF !important; /* Lighter blue for links */
     border-bottom: 1px solid rgba(0, 94, 184, 0.3) !important;
+    border-left: 3px solid transparent;
 }
 
 body.bg-primarch .menu-content a:hover {
