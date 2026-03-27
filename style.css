@@ -201,8 +201,12 @@ body.bg-primarch td {
 }
 
 body.bg-primarch h1, 
-body.bg-primarch h2, 
-body.bg-primarch h3 {
+body.bg-primarch h3, 
+body.bg-primarch h4,
+body.bg-primarch h5,
+body.bg-primarch h6,
+body.bg-primarch h7,
+body.bg-primarch h8, {
     color: var(--ultra-gold) !important;
     text-shadow: 0 0 10px rgba(195, 145, 51, 0.5) !important;
     border-bottom: 2px solid var(--ultra-gold) !important;
