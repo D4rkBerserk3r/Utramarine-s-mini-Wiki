@@ -223,7 +223,6 @@ body.bg-primarch td {
 body.bg-primarch h2, 
 body.bg-primarch h3 {
     color: var(--ultra-gold) !important;
-    text-shadow: 0 0 10px rgba(195, 145, 51, 0.4) !important;
     border-bottom: 2px solid var(--ultra-gold) !important;
 }
 
