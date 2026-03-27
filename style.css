@@ -205,8 +205,7 @@ body.bg-primarch .video-aspect-ratio {
     border-color: var(--ultra-blue) !important;
     box-shadow: 0 0 20px var(--ultra-blue-glow) !important;
 }
-body.bg-primarch p, 
-body.bg-primarch li, 
+body.bg-primarch p,  
 body.bg-primarch td {
     color: var(--ultra-blue) !important;
 }
