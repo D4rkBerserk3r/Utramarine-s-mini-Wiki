@@ -5,7 +5,7 @@
     --ultra-font: 'Share Tech Mono', monospace;
     --ultra-border: 1px solid var(--ultra-glow);
     --scanline: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 255, 153, 0.05) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.02), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.02));
-    --ultra-blue: #006CBB;      /* The Macragge Blue */
+    --ultra-blue: #117cc9;      /* The Macragge Blue */
     --ultra-gold: #C39133;      /* The Golden Aquila */
     --ultra-blue-glow: rgba(0, 94, 184, 0.5);
     --ultra-dark: #0a1a2f;
