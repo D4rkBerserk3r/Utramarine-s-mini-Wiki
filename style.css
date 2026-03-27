@@ -191,154 +191,66 @@ p {
 @keyframes blinker {
     50% { opacity: 0; }
 }
-/* --- PRIMARCH THEME OVERRIDE --- */
-body.bg-primarch {
-    color: var(--ultra-blue); /* Changes all text to Blue */
-}
+/* --- THE ULTIMATE PRIMARCH OVERRIDE (CLEANED) --- */
 
-/* Change Borders and Glows for the Primarch Page */
-body.bg-primarch .data-slate, 
-body.bg-primarch .codex-menu,
-body.bg-primarch .menu-header,
-body.bg-primarch .slate-image-right,
-body.bg-primarch .video-aspect-ratio {
-    border-color: var(--ultra-blue) !important;
-    box-shadow: 0 0 20px var(--ultra-blue-glow) !important;
-}
-
-/* Optional: Keep the Menu links in this same light blue */
-body.bg-primarch .menu-content a {
-    color: var(--ultra-font-blue) !important;
-}
-/* --- PRIMARCH CONTENT ONLY --- */
-
-/* Target only the 'content' text: Paragraphs, Lists, and Tables */
+/* 1. TEXT COLORS: LIGHT BLUE CONTENT, GOLD TITLES */
 body.bg-primarch p, 
 body.bg-primarch li, 
 body.bg-primarch td {
-    color: var(--ultra-blue) !important;
+    color: #79C0FF !important; /* The Light Blue we chose */
 }
 
-/* Ensure the Article Titles stay Gold */
+body.bg-primarch h1, 
 body.bg-primarch h2, 
 body.bg-primarch h3 {
     color: var(--ultra-gold) !important;
+    text-shadow: 0 0 10px rgba(195, 145, 51, 0.5) !important;
     border-bottom: 2px solid var(--ultra-gold) !important;
 }
 
-/* Reset the Main H1 Title to the Original (Green or Gold) */
-body.bg-primarch h1 {
-    /* If you want it Gold like the other titles: */
-    color: var(--ultra-gold) !important;
-/* --- PRIMARCH MENU SPECIFIC FIX --- */
-/* 1. Target the links inside the menu specifically */
-body.bg-primarch .menu-content a {
-    color: var(--ultra-blue) !important;
-    border-bottom: 1px solid rgba(0, 94, 184, 0.2);
+/* 2. THE DATA SLATE & SCANLINES (BLUE GLOW) */
+body.bg-primarch .data-slate {
+    border: 1px solid #005EB8 !important;
+    box-shadow: 0 0 20px rgba(0, 94, 184, 0.4) !important;
 }
 
-/* 2. Target the link hover state */
-body.bg-primarch .menu-content a:hover {
-    background: var(--ultra-blue) !important;
-    color: white !important; /* White text looks better on blue background */
-    box-shadow: 0 0 10px var(--ultra-blue);
-}
-
-/* 3. Target the Menu Header text */
-body.bg-primarch .menu-header {
-    color: var(--ultra-blue) !important;
-}
-
-/* 4. Target the glowing border of the menu box itself */
-body.bg-primarch .codex-menu {
-    border: 1px solid var(--ultra-blue) !important;
-}
-/* Change Titles to Gold */
-body.bg-primarch h1, 
-body.bg-primarch h2 {
-    color: var(--ultra-gold);
-    text-shadow: 0 0 10px rgba(195, 145, 51, 0.5);
-    border-bottom: 1px solid var(--ultra-gold);
-}
-
-/* Change the Scanline Overlay to Blue tint */
 body.bg-primarch::before {
-    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 94, 184, 0.1) 50%);
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 94, 184, 0.05) 50%);
+    background-size: 100% 4px;
 }
 
-/* Change Menu Links on Hover */
+/* 3. THE MENU (BLUE SYSTEM) */
+body.bg-primarch .codex-menu {
+    border: 1px solid #005EB8 !important;
+}
+
+body.bg-primarch .menu-header {
+    color: #005EB8 !important;
+}
+
+body.bg-primarch .menu-content a {
+    color: #79C0FF !important; /* Lighter blue for links */
+    border-bottom: 1px solid rgba(0, 94, 184, 0.3);
+}
+
 body.bg-primarch .menu-content a:hover {
-    background: var(--ultra-blue);
-    color: white;
-}
-body.bg-primarch .ultra-table th, 
-body.bg-primarch .ultra-table td {
-    font-family: var(--ultra-font);
-    background: var(--ultra-bg);
-}
-/* Table Container */
-body.bg-primarch .ultra-table {
-    width: 100%;
-    border-collapse: collapse;
-    background: rgba(10, 26, 47, 0.85);
-    border: 1px solid var(--ultra-blue);
-    box-shadow: 0 0 15px rgba(0, 94, 184, 0.4);
-    font-family: var(--ultra-font);
-    color: var(--ultra-blue-glow);
+    background: #005EB8 !important;
+    color: white !important;
+    box-shadow: 0 0 10px #005EB8;
 }
 
-/* Table Header */
-body.bg-primarch .ultra-table thead {
-    background: linear-gradient(90deg, var(--ultra-blue), #003f7f);
+/* 4. THE WARGEAR TABLE (REFINED) */
+body.bg-primarch .ultra-table {
+    border: 1px solid #005EB8 !important;
+    background: rgba(10, 26, 47, 0.9);
 }
 
 body.bg-primarch .ultra-table thead th {
-    color: var(--ultra-blue);
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    padding: 12px;
+    color: var(--ultra-gold) !important; /* Headers are Gold */
+    background: rgba(0, 94, 184, 0.3);
     border-bottom: 2px solid var(--ultra-gold);
 }
 
-/* Table Rows */
-body.bg-primarch .ultra-table tbody tr {
-    transition: all 0.2s ease-in-out;
-}
-
-body.bg-primarch .ultra-table tbody tr:nth-child(even) {
-    background: rgba(0, 94, 184, 0.08);
-}
-
-/* Hover Effect */
-body.bg-primarch .ultra-table tbody tr:hover {
-    background: rgba(0, 94, 184, 0.25);
-    box-shadow: inset 0 0 10px rgba(0, 94, 184, 0.6);
-}
-
-/* Table Cells */
-body.bg-primarch .ultra-table td {
-    padding: 10px;
-    border-bottom: 1px solid rgba(0, 94, 184, 0.2);
-}
-
-/* First Column (Wargear Names) */
 body.bg-primarch .ultra-table td:first-child {
-    color: var(--ultra-gold);
-    font-weight: bold;
+    color: var(--ultra-gold) !important; /* Item names are Gold */
 }
-
-/* Subtle Glow for Important Relics */
-body.bg-primarch .ultra-table td strong {
-    color: var(--ultra-gold);
-    text-shadow: 0 0 6px rgba(195, 145, 51, 0.6);
-}
-
-/* Optional Caption Styling */
-body.bg-primarch .ultra-table caption {
-    caption-side: top;
-    padding: 10px;
-    font-size: 1.2em;
-    color: var(--ultra-gold);
-    text-shadow: 0 0 8px rgba(195, 145, 51, 0.5);
-}
-
