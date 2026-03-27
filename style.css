@@ -203,10 +203,7 @@ body.bg-primarch td {
 /* Fixed the comma and the heading list */
 body.bg-primarch h1, 
 body.bg-primarch h2, 
-body.bg-primarch h3, 
-body.bg-primarch h4, 
-body.bg-primarch h5, 
-body.bg-primarch h6 {
+body.bg-primarch h3 {
     color: var(--ultra-gold) !important;
     text-shadow: 0 0 10px rgba(195, 145, 51, 0.5) !important;
     border-bottom: 2px solid var(--ultra-gold) !important;
@@ -235,13 +232,13 @@ body.bg-primarch .menu-header {
 
 body.bg-primarch .menu-content a {
     color: #79C0FF !important; /* Lighter blue for links */
-    border-bottom: 1px solid rgba(0, 94, 184, 0.3);
+    border-bottom: 1px solid rgba(0, 94, 184, 0.3) !important;
 }
 
 body.bg-primarch .menu-content a:hover {
     background: #005EB8 !important;
     color: white !important;
-    box-shadow: 0 0 10px #005EB8;
+    box-shadow: 0 0 10px #005EB8 !important;
 }
 
 /* 4. THE WARGEAR TABLE (REFINED) */
@@ -253,7 +250,7 @@ body.bg-primarch .ultra-table {
 body.bg-primarch .ultra-table thead th {
     color: var(--ultra-gold) !important; /* Headers are Gold */
     background: rgba(0, 94, 184, 0.3);
-    border-bottom: 2px solid var(--ultra-gold);
+    border-bottom: 2px solid var(--ultra-gold)!important;
 }
 
 body.bg-primarch .ultra-table td:first-child {
