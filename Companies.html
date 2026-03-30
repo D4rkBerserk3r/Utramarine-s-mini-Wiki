@@ -208,12 +208,11 @@
     form.addEventListener('submit', function(event) {
         // 3. THIS LINE STOPS THE RESET
         event.preventDefault(); 
-        
+		console.log("Transmission locked. Noosphere connection saved.");
         // 4. Hide the form and show the thanks
         form.style.display = 'none';
         thanks.style.display = 'block';
-        
-        console.log("Transmission locked. Noosphere connection saved.");
+		 return false; // Extra backup to prevent submission
     });
 </script>
 </body>
