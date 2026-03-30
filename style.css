@@ -261,6 +261,111 @@ body.bg-primarch .ultra-table thead th {
     border-bottom: 2px solid var(--ultra-gold)!important;
 }
 
+/* --- COMPANY GRID SYSTEM --- */
+.cogitator-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 30px 0;
+}
+
+.grid-row {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+}
+
+.company-card {
+    flex: 1;
+    background: rgba(0, 255, 153, 0.05);
+    border: var(--ultra-border);
+    transition: 0.3s;
+    min-width: 150px;
+}
+
+.company-card:hover {
+    background: rgba(0, 255, 153, 0.15);
+    box-shadow: 0 0 15px var(--ultra-glow);
+}
+
+.card-header {
+    background: var(--ultra-glow);
+    color: black;
+    padding: 5px;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.9em;
+}
+
+.banner-img {
+    width: 100%;
+    height: auto;
+    border-bottom: var(--ultra-border);
+    filter: brightness(0.8) sepia(1) hue-rotate(100deg); /* Makes images green-ish */
+}
+
+.card-content {
+    padding: 10px;
+    font-size: 0.8em;
+}
+
+.captain {
+    display: block;
+    color: var(--ultra-blue);
+    font-weight: bold;
+    margin-bottom: 5px;
+    border-bottom: 1px solid rgba(0, 255, 153, 0.2);
+}
+
+.card-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.card-content li::before {
+    content: "> ";
+}
+
+/* --- NEWSLETTER FORM --- */
+.newsletter-slate {
+    margin-top: 50px;
+    border: var(--ultra-border);
+    background: var(--ultra-bg);
+}
+
+.cogitator-form {
+    padding: 20px;
+}
+
+.form-input-group {
+    display: flex;
+    gap: 10px;
+}
+
+.cogitator-form input {
+    flex: 1;
+    background: black;
+    border: var(--ultra-border);
+    color: var(--ultra-glow);
+    padding: 10px;
+    font-family: var(--ultra-font);
+}
+
+.cogitator-form button {
+    background: var(--ultra-glow);
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    font-family: var(--ultra-font);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.cogitator-form button:hover {
+    box-shadow: 0 0 15px var(--ultra-glow);
+}
 body.bg-primarch .ultra-table td:first-child {
     color: var(--ultra-gold) !important; /* Item names are Gold */
 }
