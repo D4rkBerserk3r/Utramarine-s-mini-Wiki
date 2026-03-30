@@ -27,6 +27,9 @@ body {
 .bg-primarch {
     background-image: url('images/guilliman-bg.jpg');
 }
+.bg-companies {
+    background-image: url('images/companies-bg.jpg');
+}
 
 /* --- THE SCANLINE OVERLAY (The Secret Ingredient) --- */
 body::before {
