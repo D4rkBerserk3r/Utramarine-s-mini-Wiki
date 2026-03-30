@@ -13,13 +13,17 @@
 }
 
 body {
+   background-color: var(--ultra-dark);
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
     margin: 0;
+    padding: 0; /* Changed from 20px to 0 to prevent edge gaps */
     font: 16px var(--ultra-font);
     color: var(--ultra-glow);
+    text-transform: uppercase;
     overflow-x: hidden;
+    min-height: 100vh;
 }
 .bg-index {
     background-image: url('images/index-bg.jpg');
@@ -260,18 +264,6 @@ body.bg-primarch .ultra-table thead th {
     background: rgba(0, 94, 184, 0.3);
     border-bottom: 2px solid var(--ultra-gold)!important;
 }
-
-/ body {
-    background-color: var(--ultra-dark);
-    background-image: var(--scanline);
-    background-size: 100% 4px, 3px 100%;
-    color: var(--ultra-glow);
-    font-family: var(--ultra-font);
-    text-transform: uppercase;
-    min-height: 100vh;
-    margin: 0;
-    padding: 20px;
-} 
 
 /* Layout Grid */
 .cogitator-grid {
