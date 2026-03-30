@@ -261,7 +261,7 @@ body.bg-primarch .ultra-table thead th {
     border-bottom: 2px solid var(--ultra-gold)!important;
 }
 
-body {
+/*  body {
     background-color: var(--ultra-dark);
     background-image: var(--scanline);
     background-size: 100% 4px, 3px 100%;
@@ -270,7 +270,7 @@ body {
     text-transform: uppercase;
     margin: 0;
     padding: 20px;
-}
+} */
 
 /* Layout Grid */
 .cogitator-grid {
