@@ -360,6 +360,26 @@ body.bg-primarch .ultra-table thead th {
     opacity: 0.85;
     border-style: dashed;
 }
+
+/* --- 2. NEWSLETTER LOGIC --- */
+
+/* Initially hide the thank you message */
+.newsletter-thanks {
+    display: none; 
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px dashed var(--ultra-glow);
+    background: rgba(0, 255, 153, 0.05);
+    text-align: center;
+}
+
+/* CSS TRICK: Show the message only when the form is 'submitted' 
+   (using the :valid pseudo-class once user types an email) */
+.cogitator-form:focus-within + * + .newsletter-thanks,
+.cogitator-form:not(:placeholder-shown) ~ .newsletter-thanks {
+    display: block;
+    animation: flicker 0.3s ease-in;
+}
 .newsletter-thanks {
     margin-top: 25px;
     padding: 20px;
