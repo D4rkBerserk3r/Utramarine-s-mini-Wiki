@@ -20,6 +20,7 @@ body {
     font: 16px var(--ultra-font);
     color: var(--ultra-glow);
     overflow-x: hidden;
+    min-height: 100vh;
 }
 .bg-index {
     background-image: url('images/index-bg.jpg');
