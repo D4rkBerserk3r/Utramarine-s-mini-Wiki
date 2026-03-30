@@ -287,11 +287,12 @@ body.bg-primarch .ultra-table thead th {
     background: var(--ultra-bg);
     border: var(--ultra-border);
     padding: 12px;
-    width: 160px; /* Fixed width ensures consistent "table" look */
-    min-height: 280px; /* Keeps cards uniform regardless of text length */
+    width: 160px; 
+    min-height: 280px;
     box-shadow: 0 0 15px rgba(0, 255, 153, 0.1);
     position: relative;
     backdrop-filter: blur(5px);
+    flex: 0 0 auto; /* Prevents cards from squishing */
 }
 
 .company-card:hover {
@@ -309,14 +310,13 @@ body.bg-primarch .ultra-table thead th {
     letter-spacing: 1px;
 }
 
-/* Banner Image - Programmatic Green Tint */
 .banner-img {
     display: block;
-    width: 50px;
+    width: 60px; /* Slightly larger for visibility */
     height: auto;
     margin: 0 auto 15px;
-    filter: brightness(0) saturate(100%) invert(84%) sepia(58%) saturate(1450%) hue-rotate(101deg) brightness(105%) contrast(106%);
-    /* This filter targets your --ultra-glow color for the images */
+    /* If images don't show, temporarily remove the filter line below to test */
+    filter: brightness(0) saturate(100%) invert(84%) sepia(58%) saturate(1450%) hue-rotate(101deg);
 }
 
 /* Captain Name */
@@ -364,32 +364,24 @@ body.bg-primarch .ultra-table thead th {
 /* --- 2. NEWSLETTER LOGIC --- */
 
 .newsletter-thanks {
-    display: none; /* FORCE HIDDEN BY DEFAULT */
-    margin-top: 25px;
+    display: none; 
+    margin-top: 20px;
     padding: 20px;
     border: 1px dashed var(--ultra-glow);
     background: rgba(0, 255, 153, 0.05);
     text-align: center;
     color: var(--ultra-glow);
-}
-.newsletter-thanks h3 {
-    margin: 0 0 10px 0;
-    letter-spacing: 2px;
-    text-shadow: 0 0 8px var(--ultra-glow);
+    box-shadow: inset 0 0 10px rgba(0, 255, 153, 0.2);
 }
 
-.newsletter-thanks p {
-    margin: 0;
-    color: var(--ultra-blue);
-    font-size: 0.9rem;
-}
-
-/* CSS TRICK: Show the message only when the form is 'submitted' 
-   (using the :valid pseudo-class once user types an email) */
-.cogitator-form:focus-within + * + .newsletter-thanks,
-.cogitator-form:not(:placeholder-shown) ~ .newsletter-thanks {
+/* Logic to show message when input is NOT empty */
+.cogitator-form input:not(:placeholder-shown) ~ .newsletter-thanks {
     display: block;
-    animation: flicker 0.3s ease-in;
+}
+
+/* Logic to show message when clicking into the form */
+.cogitator-form:focus-within ~ .newsletter-thanks {
+    display: block;
 }
 
 /* Responsive tweak for tablets/phones */
