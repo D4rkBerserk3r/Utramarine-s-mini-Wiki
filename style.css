@@ -262,9 +262,11 @@ body.bg-primarch .ultra-table thead th {
 }
 
 /* --- GRID ENHANCEMENTS --- */
+/* --- COMPACT COLUMN GRID (3-4 COLUMN ADAPTIVE) --- */
 .cogitator-grid {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    /* Adjust '4' to '3' if you prefer 3 columns per row */
+    grid-template-columns: repeat(4, 1fr); 
     gap: 15px;
     margin: 20px 0;
 }
@@ -285,39 +287,62 @@ body.bg-primarch .ultra-table thead th {
 }
 
 .company-card {
-    background: var(--ultra-bg); /* Matches your data-slate background */
+    background: #000 !important; /* Solid black background */
     border: var(--ultra-border);
     display: flex;
     flex-direction: column;
-    transition: all 0.3s ease;
+    align-items: center;    /* Centers the narrow banner */
+    padding: 20px 10px;
+    text-align: center;
+    transition: 0.3s ease;
 }
 
 .company-card:hover {
     box-shadow: 0 0 15px var(--ultra-glow);
-    transform: translateY(-2px);
+    background: #050505 !important;
 }
 
 .banner-img {
-    width: 100%;
+    width: 35%;             /* Narrow profile like the photo */
+    max-width: 60px;        /* Keeping it very small and vertical */
     height: auto;
-    border-bottom: var(--ultra-border);
-    /* Effect to make any image look like a green holographic projection */
-    filter: brightness(0.7) sepia(1) hue-rotate(100deg) saturate(2);
-    background: #000;
-}
-
-.card-header {
-    background: rgba(0, 255, 153, 0.2);
-    color: var(--ultra-glow);
-    padding: 8px;
-    text-align: center;
-    font-size: 0.85em;
-    border-bottom: var(--ultra-border);
+    margin-bottom: 15px;
+    filter: brightness(0.8) sepia(1) hue-rotate(100deg) saturate(1.8);
+    background: transparent;
 }
 
 .card-content {
     padding: 12px;
     font-size: 0.8em;
+}
+
+.card-content li::before {
+    content: "> ";
+    color: var(--ultra-glow);
+}
+.card-header {
+    width: 100%;
+    background: rgba(0, 255, 153, 0.1);
+    border-bottom: var(--ultra-border);
+    padding: 5px 0;
+    margin-bottom: 12px;
+    font-size: 0.85em;
+    color: var(--ultra-glow);
+}
+
+.card-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0 0;
+    text-align: left;       /* Keeps list items aligned left within the center block */
+    display: inline-block;
+}
+
+.card-content li {
+    font-size: 0.75em;
+    color: var(--ultra-glow);
+    opacity: 0.8;
+    line-height: 1.6;
 }
 
 .captain {
@@ -327,16 +352,3 @@ body.bg-primarch .ultra-table thead th {
     text-transform: uppercase;
     border-bottom: 1px solid rgba(0, 255, 153, 0.2);
 }
-
-.card-content ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.card-content li::before {
-    content: "> ";
-    color: var(--ultra-glow);
-}
-
-/* --- NEWSLETTER BOX --- */
