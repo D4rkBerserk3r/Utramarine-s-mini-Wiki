@@ -312,11 +312,13 @@ body.bg-primarch .ultra-table thead th {
 
 .banner-img {
     display: block;
-    width: 60px; /* Slightly larger for visibility */
+    width: 60px; 
     height: auto;
     margin: 0 auto 15px;
-    /* If images don't show, temporarily remove the filter line below to test */
-    filter: brightness(0) saturate(100%) invert(84%) sepia(58%) saturate(1450%) hue-rotate(101deg);
+    position: relative;
+    z-index: 10; /* Ensures it sits above the background */
+    /* Removed the complex filter; use this simple one to start */
+    filter: brightness(1.2) contrast(1.1); 
 }
 
 /* Captain Name */
@@ -374,14 +376,9 @@ body.bg-primarch .ultra-table thead th {
     box-shadow: inset 0 0 10px rgba(0, 255, 153, 0.2);
 }
 
-/* Logic to show message when input is NOT empty */
-.cogitator-form input:not(:placeholder-shown) ~ .newsletter-thanks {
-    display: block;
-}
-
 /* Logic to show message when clicking into the form */
 .cogitator-form:focus-within ~ .newsletter-thanks {
-    display: block;
+    display: block !important;
 }
 
 /* Responsive tweak for tablets/phones */
