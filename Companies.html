@@ -199,5 +199,21 @@
 </div>
 	
 </main>
+	<script>
+    const ultraForm = document.getElementById('ultra-form');
+    const thanksSlate = document.getElementById('thanks-slate');
+
+    ultraForm.addEventListener('submit', function(e) {
+        e.preventDefault(); // Prevents the page from reloading
+        
+        // Hide the form
+        ultraForm.style.display = 'none';
+        
+        // Show the success message
+        thanksSlate.style.display = 'block';
+        
+        console.log("Astropathic burst transmitted to Macragge.");
+    });
+</script>
 </body>
 <html>
