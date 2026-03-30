@@ -164,15 +164,32 @@
     </div>
 </div>
 
-<div class="newsletter-slate">
-    <div class="menu-header">Astropathic Subscription</div>
-    <form class="cogitator-form">
-        <p>JOIN THE CRUSADE FEED. ENTER IMPERIAL IDENTIFIER:</p>
-        <div class="form-input-group">
-            <input type="email" placeholder="USER@TERRA.GOV" required>
-            <button type="submit">TRANSMIT</button>
+<div class="newsletter-container" style="background: #000; border: var(--ultra-border); margin-top: 40px;">
+    <div class="menu-header" style="display: flex; justify-content: space-between; align-items: center; background: rgba(0, 255, 153, 0.15);">
+        <span>ASTROPATHIC SUBSCRIPTION</span>
+        <div style="display: flex; align-items: center; gap: 8px;">
+            <span class="status-blink" style="font-size: 0.8em;">● LIVE UPLINK</span>
         </div>
-    </form>
+    </div>
+
+    <div class="newsletter-body" style="padding: 25px; background: #000;">
+        <p style="margin-top: 0; font-size: 0.9em; color: var(--ultra-glow);">
+            <span style="color: var(--ultra-blue);">[SYSTEM]:</span> Register your Imperial ID to receive Segmentum updates and tactical data-slates.
+        </p>
+        
+        <form class="cogitator-form" style="display: flex; gap: 10px;">
+            <input type="email" placeholder="ENTER IDENTIFIER (EMAIL)..." 
+                   style="flex: 1; background: #050505; border: var(--ultra-border); color: var(--ultra-glow); padding: 12px; font-family: var(--ultra-font);">
+            <button type="submit" 
+                    style="background: var(--ultra-glow); color: #000; border: none; padding: 0 25px; font-family: var(--ultra-font); font-weight: bold; cursor: pointer; text-transform: uppercase;">
+                Transmit
+            </button>
+        </form>
+        
+        <div style="margin-top: 15px; font-size: 0.7em; opacity: 0.7; text-align: right;">
+            ENCRYPTION LEVEL: THETA-9 // NOOSPHERE VERIFIED
+        </div>
+    </div>
 </div>
 	
 </main>
