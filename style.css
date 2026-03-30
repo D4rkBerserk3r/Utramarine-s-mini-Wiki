@@ -269,14 +269,17 @@ body.bg-primarch .ultra-table thead th {
 .cogitator-grid {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 30px; /* Space between the three main rows */
+    margin-top: 20px;
+    width: 100%;
 }
 
 .grid-row {
     display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    align-items: flex-start;
+    flex-wrap: wrap; /* Allows cards to drop to next line if screen is small */
+    gap: 15px;      /* Horizontal space between cards */
+    justify-content: flex-start; /* Keeps them left-aligned like a data-slate */
+    width: 100%;
 }
 
 /* Card Styling */
@@ -284,10 +287,11 @@ body.bg-primarch .ultra-table thead th {
     background: var(--ultra-bg);
     border: var(--ultra-border);
     padding: 12px;
-    width: 160px;
+    width: 160px; /* Fixed width ensures consistent "table" look */
+    min-height: 280px; /* Keeps cards uniform regardless of text length */
     box-shadow: 0 0 15px rgba(0, 255, 153, 0.1);
     position: relative;
-    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
 }
 
 .company-card:hover {
@@ -355,4 +359,38 @@ body.bg-primarch .ultra-table thead th {
 .company-card.scout {
     opacity: 0.85;
     border-style: dashed;
+}
+.newsletter-thanks {
+    margin-top: 25px;
+    padding: 20px;
+    border: 1px dashed var(--ultra-glow);
+    background: rgba(0, 255, 153, 0.05);
+    text-align: center;
+    color: var(--ultra-glow);
+    box-shadow: inset 0 0 10px rgba(0, 255, 153, 0.2);
+}
+
+.newsletter-thanks h3 {
+    margin: 0 0 10px 0;
+    letter-spacing: 2px;
+    text-shadow: 0 0 8px var(--ultra-glow);
+}
+
+.newsletter-thanks p {
+    margin: 0;
+    color: var(--ultra-blue);
+    font-size: 0.9rem;
+}
+
+/* Responsive tweak for tablets/phones */
+@media (max-width: 800px) {
+    .container {
+        padding: 20px; /* Removes large left margin on small screens */
+    }
+    .codex-menu {
+        position: relative;
+        width: 100%;
+        margin-bottom: 20px;
+        top: 0; left: 0;
+    }
 }
