@@ -21,6 +21,7 @@ body {
     color: var(--ultra-glow);
     overflow-x: hidden;
     min-height: 100vh;
+    margin: 0;
 }
 .bg-index {
     background-image: url('images/index-bg.jpg');
