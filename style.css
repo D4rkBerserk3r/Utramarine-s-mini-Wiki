@@ -266,7 +266,7 @@ body.bg-primarch .ultra-table thead th {
 .cogitator-grid {
     display: grid;
     /* Adjust '4' to '3' if you prefer 3 columns per row */
-    grid-template-columns: repeat(4, 1fr); 
+    grid-template-columns: repeat(3, 1fr); 
     gap: 15px;
     margin: 20px 0;
 }
@@ -303,9 +303,9 @@ body.bg-primarch .ultra-table thead th {
 }
 
 .banner-img {
-    width: 35%;             /* Narrow profile like the photo */
-    max-width: 60px;        /* Keeping it very small and vertical */
-    height: 50%;
+    width: 40%;             /* Narrow profile like the photo */
+    max-width: 80px;        /* Keeping it very small and vertical */
+    height: 40%;
     margin-bottom: 15px;
     filter: brightness(0.8) sepia(1) hue-rotate(100deg) saturate(1.8);
     background: transparent;
