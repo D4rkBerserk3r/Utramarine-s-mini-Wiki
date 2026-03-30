@@ -20,8 +20,6 @@ body {
     font: 16px var(--ultra-font);
     color: var(--ultra-glow);
     overflow-x: hidden;
-    min-height: 100vh;
-    margin: 0;
 }
 .bg-index {
     background-image: url('images/index-bg.jpg');
@@ -263,16 +261,17 @@ body.bg-primarch .ultra-table thead th {
     border-bottom: 2px solid var(--ultra-gold)!important;
 }
 
-/*  body {
+/ body {
     background-color: var(--ultra-dark);
     background-image: var(--scanline);
     background-size: 100% 4px, 3px 100%;
     color: var(--ultra-glow);
     font-family: var(--ultra-font);
     text-transform: uppercase;
+    min-height: 100vh;
     margin: 0;
     padding: 20px;
-} */
+} 
 
 /* Layout Grid */
 .cogitator-grid {
