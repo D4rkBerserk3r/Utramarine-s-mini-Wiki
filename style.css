@@ -261,94 +261,105 @@ body.bg-primarch .ultra-table thead th {
     border-bottom: 2px solid var(--ultra-gold)!important;
 }
 
-/* --- GRID ENHANCEMENTS --- */
-/* --- COMPACT COLUMN GRID (3-4 COLUMN ADAPTIVE) --- */
-.cogitator-grid {
-    display: grid;
-    /* Adjust '4' to '3' if you prefer 3 columns per row */
-    grid-template-columns: repeat(2, 1fr); 
-    gap: 15px;
-    margin: 20px 0;
+body {
+    background-color: var(--ultra-dark);
+    background-image: var(--scanline);
+    background-size: 100% 4px, 3px 100%;
+    color: var(--ultra-glow);
+    font-family: var(--ultra-font);
+    text-transform: uppercase;
+    margin: 0;
+    padding: 20px;
 }
 
-.grid-header-main {
-    background: rgba(0, 255, 153, 0.1);
-    border: var(--ultra-border);
-    padding: 10px;
-    text-align: center;
-    font-weight: bold;
-    letter-spacing: 2px;
+/* Layout Grid */
+.cogitator-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 .grid-row {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
     gap: 10px;
+    align-items: flex-start;
 }
 
+/* Card Styling */
 .company-card {
-    background: #000 !important; /* Solid black background */
+    background: var(--ultra-bg);
     border: var(--ultra-border);
-    display: flex;
-    flex-direction: column;
-    align-items: center;    /* Centers the narrow banner */
-    padding: 20px 10px;
-    text-align: center;
-    transition: 0.3s ease;
+    padding: 12px;
+    width: 160px;
+    box-shadow: 0 0 15px rgba(0, 255, 153, 0.1);
+    position: relative;
+    transition: all 0.3s ease;
 }
 
 .company-card:hover {
-    box-shadow: 0 0 15px var(--ultra-glow);
-    background: #050505 !important;
+    box-shadow: 0 0 20px var(--ultra-glow);
+    transform: translateY(-2px);
 }
 
-.banner-img {
-    width: 40%;             /* Narrow profile like the photo */
-    max-width: 80px;        /* Keeping it very small and vertical */
-    height: 40%;
-    margin-bottom: 15px;
-    filter: brightness(0.8) sepia(1) hue-rotate(100deg) saturate(1.8);
-    background: transparent;
-}
-
-.card-content {
-    padding: 12px;
-    font-size: 0.8em;
-}
-
-.card-content li::before {
-    content: "> ";
-    color: var(--ultra-glow);
-}
+/* Card Header */
 .card-header {
-    width: 100%;
-    background: rgba(0, 255, 153, 0.1);
     border-bottom: var(--ultra-border);
-    padding: 5px 0;
-    margin-bottom: 12px;
-    font-size: 0.85em;
-    color: var(--ultra-glow);
+    font-size: 0.9rem;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+    text-align: center;
+    letter-spacing: 1px;
 }
 
+/* Banner Image - Programmatic Green Tint */
+.banner-img {
+    display: block;
+    width: 50px;
+    height: auto;
+    margin: 0 auto 15px;
+    filter: brightness(0) saturate(100%) invert(84%) sepia(58%) saturate(1450%) hue-rotate(101deg) brightness(105%) contrast(106%);
+    /* This filter targets your --ultra-glow color for the images */
+}
+
+/* Captain Name */
+.captain {
+    display: block;
+    color: var(--ultra-gold);
+    font-size: 0.75rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+    min-height: 2em;
+}
+
+/* Unit Lists */
 .card-content ul {
     list-style: none;
     padding: 0;
-    margin: 10px 0 0 0;
-    text-align: left;       /* Keeps list items aligned left within the center block */
-    display: inline-block;
+    margin: 0;
 }
 
 .card-content li {
-    font-size: 0.75em;
-    color: var(--ultra-glow);
-    opacity: 0.8;
-    line-height: 1.6;
+    font-size: 0.65rem;
+    margin-bottom: 4px;
+    padding-left: 10px;
+    position: relative;
 }
 
-.captain {
-    color: var(--ultra-gold);
-    display: block;
-    margin-bottom: 8px;
-    text-transform: uppercase;
-    border-bottom: 1px solid rgba(0, 255, 153, 0.2);
+.card-content li::before {
+    content: ">";
+    position: absolute;
+    left: 0;
+    color: var(--ultra-glow);
+}
+
+/* Card Variants */
+.company-card.veteran {
+    border-left: 4px solid var(--ultra-gold);
+}
+
+.company-card.scout {
+    opacity: 0.85;
+    border-style: dashed;
 }
