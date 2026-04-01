@@ -11,7 +11,9 @@
     --ultra-dark: #0a1a2f;
      
 }
-
+html {
+    scroll-behavior: smooth;
+}
 body {
    background-color: var(--ultra-dark);
     background-size: cover;
@@ -389,4 +391,104 @@ body.bg-primarch .ultra-table thead th {
         margin-bottom: 20px;
         top: 0; left: 0;
     }
+}
+
+/* --- SCROLL TRIGGER BUTTON --- */
+.scroll-trigger {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 10005; /* Above everything */
+    background: var(--ultra-bg);
+    border: var(--ultra-border);
+    color: var(--ultra-glow);
+    padding: 10px;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 0 10px var(--ultra-glow);
+    transition: 0.3s;
+}
+
+.scroll-trigger:hover {
+    background: var(--ultra-glow);
+    color: #000;
+}
+
+.scroll-trigger .arrow {
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+    40% {transform: translateY(5px);}
+    60% {transform: translateY(3px);}
+}
+
+/* --- FOOTER LAYOUT --- */
+.cogitator-footer {
+    margin-top: 100px;
+    padding: 40px;
+    background: rgba(0, 5, 0, 0.95);
+    border-top: 2px solid var(--ultra-glow);
+    position: relative;
+    z-index: 10001;
+}
+
+.footer-grid {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.footer-contacts h3, .footer-map h3 {
+    color: var(--ultra-gold);
+    margin-bottom: 20px;
+}
+
+.footer-contacts ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-contacts li {
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+}
+
+/* --- FAKE MAP LOGIC --- */
+.map-wrapper {
+    position: relative;
+    width: 300px; /* Small footer size */
+    border: var(--ultra-border);
+}
+
+.map-bg {
+    width: 100%;
+    filter: brightness(0.4) sepia(1) hue-rotate(100deg) saturate(3);
+}
+
+.map-marker {
+    position: absolute;
+    top: 50%; left: 50%; /* Adjust these to move your dot */
+    transform: translate(-50%, -50%);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.marker-pulse {
+    width: 15px; height: 15px;
+    background: var(--ultra-glow);
+    border-radius: 50%;
+    box-shadow: 0 0 10px var(--ultra-glow);
+    animation: map-ping 1.5s infinite;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 0.7rem;
+    opacity: 0.5;
 }
