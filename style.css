@@ -492,7 +492,7 @@ body.bg-primarch .ultra-table thead th {
     width: 100%;
     display: block;
     /* This makes the screenshot look like a holographic projection */
-    filter: brightness(0.4) sepia(1) hue-rotate(100deg) saturate(3) contrast(1.2);
+  /*  filter: brightness(0.4) sepia(1) hue-rotate(100deg) saturate(3) contrast(1.2); */
 }
 
 /* THE CLICKABLE MARKER (This redirects to your site) */
