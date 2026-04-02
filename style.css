@@ -498,7 +498,7 @@ body.bg-primarch .ultra-table thead th {
 /* THE CLICKABLE MARKER (This redirects to your site) */
 .target-link {
     position: absolute;
-    top: 39%; left: 38%; /* Change these to mark your specific house/location */
+    top: 35%; left: 34%; /* Change these to mark your specific house/location */
     text-decoration: none;
     cursor: pointer;
 }
