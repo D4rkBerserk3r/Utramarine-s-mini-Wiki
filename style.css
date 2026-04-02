@@ -457,7 +457,34 @@ body.bg-primarch .ultra-table thead th {
 .map-visual {
     width: 100%;
     display: block;
-    filter: brightness(0.4) sepia(1) hue-rotate(100deg) saturate(3); /* Green Tint */
+ /*   filter: brightness(0.4) sepia(1) hue-rotate(100deg) saturate(3); Green Tint */ 
+}
+/* THE CLICKABLE MARKER (This redirects to your site) */
+.target-link {
+    position: absolute;
+    top: 35%; left: 34%; /* Change these to mark your specific house/location */
+    text-decoration: none;
+    cursor: pointer;
+}
+.target-crosshair {
+    width: 20px;
+    height: 20px;
+    border: 1px solid #ff3333;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #ff3333;
+    animation: target-pulse 1s infinite alternate;
+}
+
+@keyframes target-pulse {
+    from { transform: scale(1); opacity: 0.5; }
+    to { transform: scale(1.3); opacity: 1; }
+}
+.target-label {
+    color: #ff3333;
+    font-size: 0.6rem;
+    font-weight: bold;
+    display: block;
+    margin-top: 5px;
 }
 
 /* --- 2. GUILLIMAN PAGE OVERRIDE (BLUE & GOLD) --- */
@@ -504,7 +531,7 @@ body.bg-primarch .map-portal-wrapper {
 }
 
 body.bg-primarch .map-visual {
-    filter: brightness(0.5) sepia(1) hue-rotate(190deg) saturate(2.5) !important; /* Blue Tint */
+   /* filter: brightness(0.5) sepia(1) hue-rotate(190deg) saturate(2.5) !important;  Blue Tint */
 }
 
 body.bg-primarch .target-label {
@@ -525,4 +552,54 @@ body.bg-primarch .target-crosshair {
 @keyframes target-pulse {
     from { transform: scale(1); opacity: 0.6; }
     to { transform: scale(1.3); opacity: 1; }
+}
+
+body.bg-primarch .target-link {
+    position: absolute;
+    top: 35%; 
+    left: 34%; 
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    z-index: 10;
+}
+
+/* 2. Restore the pulsing Gold Crosshair */
+body.bg-primarch .target-crosshair {
+    width: 24px;
+    height: 24px;
+    border: 2px solid var(--ultra-gold) !important;
+    border-radius: 50%;
+    box-shadow: 0 0 15px var(--ultra-gold);
+    background: rgba(195, 145, 51, 0.1); /* Slight gold fill */
+    animation: target-pulse-gold 1s infinite alternate !important;
+}
+
+/* 3. Restore the "COORDINATES LOCKED" Label */
+body.bg-primarch .target-label {
+    color: var(--ultra-gold) !important;
+    font-size: 0.65rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-top: 8px;
+    text-shadow: 0 0 5px #000, 0 0 10px var(--ultra-gold);
+    display: block !important;
+    text-align: center;
+    width: 120px; /* Prevents text from wrapping awkwardly */
+}
+
+/* 4. Gold Pulse Animation */
+@keyframes target-pulse-gold {
+    from { 
+        transform: scale(1); 
+        box-shadow: 0 0 5px var(--ultra-gold);
+        opacity: 0.7;
+    }
+    to { 
+        transform: scale(1.3); 
+        box-shadow: 0 0 20px var(--ultra-gold);
+        opacity: 1;
+    }
 }
