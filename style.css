@@ -461,7 +461,7 @@ body.bg-primarch .ultra-table thead th {
 /* THE CLICKABLE MARKER (This redirects to your site) */
 .target-link {
     position: absolute;
-    top: 35%; left: 34%; /* Change these to mark your specific house/location */
+    top: 34%; left: 35%; /* Change these to mark your specific house/location */
     text-decoration: none;
     cursor: pointer;
 }
@@ -551,8 +551,8 @@ body.bg-primarch .target-crosshair {
 
 body.bg-primarch .target-link {
     position: absolute;
-    top: 35%; 
-    left: 34%; 
+    top: 34%; 
+    left: 35%; 
     text-decoration: none;
     display: flex;
     flex-direction: column;
