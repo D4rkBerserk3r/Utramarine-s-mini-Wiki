@@ -545,7 +545,7 @@ body.bg-primarch .ultra-table thead th {
 .mouse-icon {
     width: 22px;
     height: 38px;
-    border: 2px solid #005EB8; 
+    border: 2px solid var(--ultra-blue-glow); 
     border-radius: 12px;
     margin: 0 auto 8px;
     position: relative;
@@ -572,11 +572,10 @@ body.bg-primarch .ultra-table thead th {
 
 /* 2. THE CONTAINED COGITATOR FOOTER */
 .cogitator-footer {
-    /* Removed 100vw - now it stays within your container padding */
     width: 100%;
     max-width: 1000px; 
-    background: var(--ultra-bg);
-    border: 1px solid #005EB8;
+    background: var(--ultra-blue);
+    border: 1px solid var(--ultrea-gold);
     border-top: 3px solid var(--ultra-gold);
     padding: 40px;
     margin-top: 80px;
@@ -614,7 +613,7 @@ body.bg-primarch .ultra-table thead th {
 .map-portal-wrapper {
     position: relative;
     width: 320px;
-    border: 1px solid #005EB8;
+    border: 1px solid var(--ultra-gold) !important;
     line-height: 0;
 }
 
