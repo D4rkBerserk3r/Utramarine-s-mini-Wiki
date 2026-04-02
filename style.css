@@ -457,7 +457,6 @@ body.bg-primarch .ultra-table thead th {
 .map-visual {
     width: 100%;
     display: block;
- /*   filter: brightness(0.4) sepia(1) hue-rotate(100deg) saturate(3); Green Tint */ 
 }
 /* THE CLICKABLE MARKER (This redirects to your site) */
 .target-link {
@@ -528,10 +527,6 @@ body.bg-primarch .vox-contacts p {
 body.bg-primarch .map-portal-wrapper {
     border: 1px solid var(--ultra-gold) !important;
     box-shadow: 0 0 15px rgba(0, 94, 184, 0.4);
-}
-
-body.bg-primarch .map-visual {
-   /* filter: brightness(0.5) sepia(1) hue-rotate(190deg) saturate(2.5) !important;  Blue Tint */
 }
 
 body.bg-primarch .target-label {
