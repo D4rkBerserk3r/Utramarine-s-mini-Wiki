@@ -525,131 +525,60 @@ body.bg-primarch .ultra-table thead th {
     margin-top: 5px;
 }
 
+/* ---  GUILLIMAN PAGE OVERRIDE (BLUE & GOLD ONLY) --- */
 
-/* --- ULTRAMARINE GLOBAL UI (Contained Version) --- */
-
-/* 1. THE FLOATING SCROLL TRIGGER */
-.scroll-to-map {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    cursor: pointer;
-    z-index: 10005; 
-    text-align: center;
-    color: var(--ultra-gold); 
-    font-size: 0.65rem;
-    letter-spacing: 2px;
+/* Changes the Mouse Icon to Gold/Blue Glow */
+body.bg-primarch .scroll-to-map {
+    color: var(--ultra-gold) !important;
     text-shadow: 0 0 8px var(--ultra-blue-glow);
 }
 
-.mouse-icon {
-    width: 22px;
-    height: 38px;
-    border: 2px solid var(--ultra-blue-glow); 
-    border-radius: 12px;
-    margin: 0 auto 8px;
-    position: relative;
+body.bg-primarch .mouse-icon {
+    border: 2px solid #005EB8 !important; /* Macragge Blue */
     box-shadow: 0 0 10px var(--ultra-blue-glow);
 }
 
-.mouse-icon::before {
-    content: '';
-    width: 4px;
-    height: 8px;
-    background: var(--ultra-gold); 
-    position: absolute;
-    top: 6px; 
-    left: 50%;
-    transform: translateX(-50%);
-    animation: mouse-scroll 1.5s infinite;
+body.bg-primarch .mouse-icon::before {
+    background: var(--ultra-gold) !important;
     box-shadow: 0 0 5px var(--ultra-gold);
 }
 
+/* Changes the Footer to Ultra-BG and Gold Borders */
+body.bg-primarch .cogitator-footer {
+    background: var(--ultra-bg) !important;
+    border: 1px solid #005EB8 !important;
+    border-top: 3px solid var(--ultra-gold) !important;
+    box-shadow: 0 0 20px rgba(0, 94, 184, 0.3);
+}
+
+body.bg-primarch .vox-contacts h2, 
+body.bg-primarch .tactical-visualizer h2 {
+    color: var(--ultra-gold) !important;
+    border-bottom: 1px solid #005EB8 !important;
+    text-shadow: 0 0 5px var(--ultra-gold) !important;
+}
+
+body.bg-primarch .vox-contacts p {
+    color: #79c0ff !important;
+}
+
+/* Changes the Map Portal to Gold Border */
+body.bg-primarch .map-portal-wrapper {
+    border: 1px solid var(--ultra-gold) !important;
+    box-shadow: 0 0 15px rgba(0, 94, 184, 0.4);
+}
+
+body.bg-primarch .target-label {
+    color: var(--ultra-gold) !important;
+}
+
+/* --- ANIMATIONS --- */
 @keyframes mouse-scroll {
     0% { opacity: 1; top: 6px; }
     100% { opacity: 0; top: 20px; }
 }
 
-/* 2. THE CONTAINED COGITATOR FOOTER */
-.cogitator-footer {
-    width: 100%;
-    max-width: 1000px; 
-    background: var(--ultra-blue) !important;
-    border: 1px solid var(--ultrea-gold) !important;
-    border-top: 3px solid var(--ultra-gold) !important;
-    padding: 40px;
-    margin-top: 80px;
-    margin-bottom: 40px;
-    position: relative;
-    z-index: 10001;
-    box-shadow: 0 0 20px rgba(0, 94, 184, 0.2);
-    backdrop-filter: blur(5px);
-}
-
-.footer-split {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    gap: 30px;
-}
-
-.vox-contacts h2, .tactical-visualizer h2 {
-    color: var(--ultra-gold) !important;
-    font-size: 1.1rem;
-    border-bottom: 1px solid #005EB8 !important;
-    padding-bottom: 10px;
-    margin-bottom: 20px;
-    text-shadow: 0 0 5px var(--ultra-gold) !important;
-}
-
-.vox-contacts p {
-    color: #79c0ff;
-    font-size: 0.85rem;
-    margin-bottom: 10px;
-}
-
-/* 3. THE TACTICAL MAP PORTAL */
-.map-portal-wrapper {
-    position: relative;
-    width: 320px;
-    border: 1px solid var(--ultra-gold) !important;
-    line-height: 0;
-}
-
-.map-visual {
-    width: 100%;
-    display: block;
-    filter: brightness(0.5) sepia(1) hue-rotate(190deg) saturate(2.5);
-}
-
-.target-link {
-    position: absolute;
-    top: 35%; 
-    left: 34%; 
-    text-decoration: none;
-    cursor: pointer;
-}
-
-.target-crosshair {
-    width: 20px;
-    height: 20px;
-    border: 2px solid var(--ultra-gold);
-    border-radius: 50%;
-    box-shadow: 0 0 10px var(--ultra-gold);
-    animation: target-pulse 1s infinite alternate;
-}
-
 @keyframes target-pulse {
     from { transform: scale(1); opacity: 0.6; }
     to { transform: scale(1.3); opacity: 1; }
-}
-
-.target-label {
-    color: var(--ultra-gold) !important;
-    font-size: 0.6rem;
-    font-weight: bold;
-    display: block;
-    margin-top: 8px;
-    text-align: center;
 }
