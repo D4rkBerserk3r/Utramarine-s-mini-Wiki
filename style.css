@@ -574,9 +574,9 @@ body.bg-primarch .ultra-table thead th {
 .cogitator-footer {
     width: 100%;
     max-width: 1000px; 
-    background: var(--ultra-blue);
-    border: 1px solid var(--ultrea-gold);
-    border-top: 3px solid var(--ultra-gold);
+    background: var(--ultra-blue) !important;
+    border: 1px solid var(--ultrea-gold) !important;
+    border-top: 3px solid var(--ultra-gold) !important;
     padding: 40px;
     margin-top: 80px;
     margin-bottom: 40px;
@@ -597,10 +597,10 @@ body.bg-primarch .ultra-table thead th {
 .vox-contacts h2, .tactical-visualizer h2 {
     color: var(--ultra-gold) !important;
     font-size: 1.1rem;
-    border-bottom: 1px solid #005EB8;
+    border-bottom: 1px solid #005EB8 !important;
     padding-bottom: 10px;
     margin-bottom: 20px;
-    text-shadow: 0 0 5px var(--ultra-gold);
+    text-shadow: 0 0 5px var(--ultra-gold) !important;
 }
 
 .vox-contacts p {
@@ -646,7 +646,7 @@ body.bg-primarch .ultra-table thead th {
 }
 
 .target-label {
-    color: var(--ultra-gold);
+    color: var(--ultra-gold) !important;
     font-size: 0.6rem;
     font-weight: bold;
     display: block;
