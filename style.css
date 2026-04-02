@@ -393,46 +393,15 @@ body.bg-primarch .ultra-table thead th {
     }
 }
 
-/* --- SCROLL TRIGGER BUTTON --- */
-.scroll-trigger {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 10005; /* Above everything */
-    background: var(--ultra-bg);
-    border: var(--ultra-border);
-    color: var(--ultra-glow);
-    padding: 10px;
-    text-decoration: none;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    box-shadow: 0 0 10px var(--ultra-glow);
-    transition: 0.3s;
-}
+/* --- 1. GLOBAL SCROLL & FOOTER (DEFAULT GREEN) --- */
 
-.scroll-trigger:hover {
-    background: var(--ultra-glow);
-    color: #000;
-}
-
-.scroll-trigger .arrow {
-    animation: bounce 2s infinite;
-}
-
-@keyframes bounce {
-    0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
-    40% {transform: translateY(5px);}
-    60% {transform: translateY(3px);}
-}
-
-/* --- FLOATING SCROLL BUTTON --- */
+/* Floating Scroll Trigger */
 .scroll-to-map {
     position: fixed;
     bottom: 30px;
     right: 30px;
     cursor: pointer;
-    z-index: 10005; /* Above scanlines */
+    z-index: 10005;
     text-align: center;
     color: var(--ultra-glow);
     font-size: 0.6rem;
@@ -454,19 +423,16 @@ body.bg-primarch .ultra-table thead th {
     height: 8px;
     background: var(--ultra-glow);
     position: absolute;
-    top: 6px; left: 50%;
+    top: 6px; 
+    left: 50%;
     transform: translateX(-50%);
     animation: mouse-scroll 1.5s infinite;
 }
 
-@keyframes mouse-scroll {
-    0% { opacity: 1; top: 6px; }
-    100% { opacity: 0; top: 20px; }
-}
-
-/* --- FOOTER & MAP --- */
+/* Footer & Map Container */
 .cogitator-footer {
-    background: rgba(0, 10, 5, 0.98);
+    background: rgba(0, 10, 5, 0.98); /* Default Green-Black */
+    border: 1px solid var(--ultra-glow);
     border-top: 2px solid var(--ultra-glow);
     padding: 50px 30px;
     margin-top: 100px;
@@ -491,43 +457,12 @@ body.bg-primarch .ultra-table thead th {
 .map-visual {
     width: 100%;
     display: block;
-    /* This makes the screenshot look like a holographic projection */
-  /*  filter: brightness(0.4) sepia(1) hue-rotate(100deg) saturate(3) contrast(1.2); */
+    filter: brightness(0.4) sepia(1) hue-rotate(100deg) saturate(3); /* Green Tint */
 }
 
-/* THE CLICKABLE MARKER (This redirects to your site) */
-.target-link {
-    position: absolute;
-    top: 35%; left: 34%; /* Change these to mark your specific house/location */
-    text-decoration: none;
-    cursor: pointer;
-}
+/* --- 2. GUILLIMAN PAGE OVERRIDE (BLUE & GOLD) --- */
 
-.target-crosshair {
-    width: 20px;
-    height: 20px;
-    border: 1px solid #ff3333;
-    border-radius: 50%;
-    box-shadow: 0 0 10px #ff3333;
-    animation: target-pulse 1s infinite alternate;
-}
-
-@keyframes target-pulse {
-    from { transform: scale(1); opacity: 0.5; }
-    to { transform: scale(1.3); opacity: 1; }
-}
-
-.target-label {
-    color: #ff3333;
-    font-size: 0.6rem;
-    font-weight: bold;
-    display: block;
-    margin-top: 5px;
-}
-
-/* ---  GUILLIMAN PAGE OVERRIDE (BLUE & GOLD ONLY) --- */
-
-/* Changes the Mouse Icon to Gold/Blue Glow */
+/* UI Elements Override */
 body.bg-primarch .scroll-to-map {
     color: var(--ultra-gold) !important;
     text-shadow: 0 0 8px var(--ultra-blue-glow);
@@ -543,9 +478,9 @@ body.bg-primarch .mouse-icon::before {
     box-shadow: 0 0 5px var(--ultra-gold);
 }
 
-/* Changes the Footer to Ultra-BG and Gold Borders */
+/* Footer Background & Borders */
 body.bg-primarch .cogitator-footer {
-    background: var(--ultra-bg) !important;
+    background: var(--ultra-bg) !important; /* Uses your Blue-Tinted BG */
     border: 1px solid #005EB8 !important;
     border-top: 3px solid var(--ultra-gold) !important;
     box-shadow: 0 0 20px rgba(0, 94, 184, 0.3);
@@ -562,17 +497,26 @@ body.bg-primarch .vox-contacts p {
     color: #79c0ff !important;
 }
 
-/* Changes the Map Portal to Gold Border */
+/* Map Portal Blue/Gold Fix */
 body.bg-primarch .map-portal-wrapper {
     border: 1px solid var(--ultra-gold) !important;
     box-shadow: 0 0 15px rgba(0, 94, 184, 0.4);
+}
+
+body.bg-primarch .map-visual {
+    filter: brightness(0.5) sepia(1) hue-rotate(190deg) saturate(2.5) !important; /* Blue Tint */
 }
 
 body.bg-primarch .target-label {
     color: var(--ultra-gold) !important;
 }
 
-/* --- ANIMATIONS --- */
+body.bg-primarch .target-crosshair {
+    border: 2px solid var(--ultra-gold) !important;
+    box-shadow: 0 0 10px var(--ultra-gold);
+}
+
+/* --- 3. ANIMATIONS --- */
 @keyframes mouse-scroll {
     0% { opacity: 1; top: 6px; }
     100% { opacity: 0; top: 20px; }
