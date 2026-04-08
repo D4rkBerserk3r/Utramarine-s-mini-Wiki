@@ -239,6 +239,7 @@ body.bg-primarch .data-slate a {
     color: var(--ultra-glow-blue)!important;
     text-decoration: none !important;
     display: inline-block;
+    padding-bottom: 1px;
     border-bottom: 1px dashed var(--ultra-glow-blue)!important;
     transition: 0.3s;
 }
