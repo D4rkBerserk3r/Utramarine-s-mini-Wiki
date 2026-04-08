@@ -233,15 +233,19 @@ body.bg-primarch::before {
 
  body.bg-primarch .slate-image-right {
      border: var(--ultra-border-blue) !important;
-     box-shadow: var(--ultra-border-blue) !important; 
+     box-shadow: 0 0 20px rgba(0, 212, 255, 0.4) !important;
  }
 body.bg-primarch .data-slate a {
     color: var(--ultra-glow-blue)!important;
+    text-decoration: none !important;
+    display: inline-block;
     border-bottom: 1px dashed var(--ultra-glow-blue)!important;
+    transition: 0.3s;
 }
 
 body.bg-primarch .data-slate a:hover {
     background: var(--ultra-glow-blue) !important;
+    color: #000 !important;
     box-shadow: 0 0 10px var(--ultra-glow-blue)!important;
 }
 
