@@ -238,7 +238,7 @@ body.bg-primarch::before {
 body.bg-primarch .data-slate a {
     color: var(--ultra-glow-blue) !important;
     text-decoration: none;
-    border-bottom: 1px dashed var(--ultra-glow-blue) !important;
+    border-bottom: 1px dashed var(--ultra-glow-blue);
     transition: 0.3s;
 }
 
