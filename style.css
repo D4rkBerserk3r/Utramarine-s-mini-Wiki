@@ -9,7 +9,7 @@
     --ultra-gold: #C39133;      /* The Golden Aquila */
     --ultra-blue-glow: rgba(0, 94, 184, 0.5);
     --ultra-dark: #0a1a2f;
-    --ultra-border-blue: 1px solid var(--ultra-blue-glow);
+    --ultra-border-blue:1px solid #005EB8;
      
 }
 html {
