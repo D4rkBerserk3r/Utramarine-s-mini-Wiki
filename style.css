@@ -236,16 +236,16 @@ body.bg-primarch::before {
          box-shadow: var(--ultra-border-blue) !important; 
  }
 body.bg-primarch .data-slate a {
-    color: var(--ultra-glow-blue);
+    color: var(--ultra-glow-blue)!important;
     text-decoration: none;
-    border-bottom: 1px dashed var(--ultra-glow-blue);
+    border-bottom: 1px dashed var(--ultra-glow-blue)!important;
     transition: 0.3s;
 }
 
 body.bg-primarch .data-slate a:hover {
-    background: var(--ultra-glow-blue) ;
+    background: var(--ultra-glow-blue) !important;
     color: #000;
-    box-shadow: 0 0 10px var(--ultra-glow-blue);
+    box-shadow: 0 0 10px var(--ultra-glow-blue)!important;
 }
 
 /* 3. THE MENU (BLUE SYSTEM) */
