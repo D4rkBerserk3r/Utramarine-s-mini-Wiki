@@ -233,6 +233,7 @@ body.bg-primarch::before {
 
  body.bg-primarch .slate-image-right {
      border: var(--ultra-border-blue) !important;
+         box-shadow: var(--ultra-border-blue) !important ; 
  }
 
 /* 3. THE MENU (BLUE SYSTEM) */
