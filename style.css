@@ -232,20 +232,20 @@ body.bg-primarch::before {
 }
 
  body.bg-primarch .slate-image-right {
-     border: var(--ultra-border-blue) !important;
+     border: #79C0FF !important;
      box-shadow: 0 0 20px rgba(0, 212, 255, 0.4) !important;
  }
 body.bg-primarch .data-slate a {
-    color: var(--ultra-blue-glow)!important;
+    color: #79C0FF !important;
     text-decoration: none !important;
-    border-bottom: 1px dashed var(--ultra-blue-glow)!important;
+    border-bottom: 1px dashed #79C0FF!important;
     transition: 0.3s;
 }
 
 body.bg-primarch .data-slate a:hover {
-    background: var(--ultra-blue-glow) !important;
+    background: #79C0FF !important;
     color: #000 !important;
-    box-shadow: 0 0 10px var(--ultra-blue-glow)!important;
+    box-shadow: 0 0 10px #79C0FF!important;
 }
 
 /* 3. THE MENU (BLUE SYSTEM) */
