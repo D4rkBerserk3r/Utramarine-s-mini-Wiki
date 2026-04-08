@@ -9,7 +9,7 @@
     --ultra-gold: #C39133;      /* The Golden Aquila */
     --ultra-blue-glow: rgba(0, 94, 184, 0.5);
     --ultra-dark: #0a1a2f;
-    --ultra-border-blue:1px solid #005EB8;
+     --ultra-border-blue: 1px solid var(--ultra-blue-glow);
      
 }
 html {
@@ -236,18 +236,16 @@ body.bg-primarch::before {
      box-shadow: 0 0 20px rgba(0, 212, 255, 0.4) !important;
  }
 body.bg-primarch .data-slate a {
-    color: var(--ultra-glow-blue)!important;
+    color: var(--ultra-blue-glow)!important;
     text-decoration: none !important;
-    display: inline-block;
-    padding-bottom: 1px;
-    border-bottom: 1px dashed var(--ultra-glow-blue)!important;
+    border-bottom: 1px dashed var(--ultra-blue-glow)!important;
     transition: 0.3s;
 }
 
 body.bg-primarch .data-slate a:hover {
-    background: var(--ultra-glow-blue) !important;
+    background: var(--ultra-blue-glow) !important;
     color: #000 !important;
-    box-shadow: 0 0 10px var(--ultra-glow-blue)!important;
+    box-shadow: 0 0 10px var(--ultra-blue-glow)!important;
 }
 
 /* 3. THE MENU (BLUE SYSTEM) */
