@@ -1,122 +1,120 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="eng">
 <head>
     <meta charset="UTF-8">
-    <title>COGITATOR // TARGET_DATABASE</title>
+    <title>COGITATOR // THREAT_ASSESSMENT</title>
+    <link rel="icon" type="image/x-icon" href="https://spikeybits.com/wp-content/uploads/2024/10/space-marines-wal-hor-codex-art-cover.png">
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
 </head>
 <body class="bg-enemies">
 
     <div id="notifica-rosso" onclick="this.style.display='none'">
-        <div class="warning-border"></div>
-        <h1 class="alert-text">⚠️\\: WARNING :// ⚠️</h1>
-        <p>RESTRICTED XENOS / HERETIC DATA DETECTED</p>
-        <p class="blink">PURGE PROTOCOL INITIALIZED</p>
-        <div class="loading-bar-red"><div class="fill"></div></div>
-        <span class="click-to-proceed">[ CLICK TO DECRYPT HOSTILE DOSSIERS ]</span>
+        <h1 style="border:none; font-size: 3em; color: #ff3333;">⚠️ WARNING ⚠️</h1>
+        <p style="font-size: 1.5em; color: #ff3333;">HOSTILE DATA DETECTED</p>
+        <p style="opacity: 0.8; color: #ff3333;">[ UNAUTHORIZED ACCESS IS TREASON ]</p>
+        <p style="opacity: 0.5;">[ Click to Decrypt ]</p>
     </div>
 
-    <div class="codex-menu">
-        <label class="menu-header" for="menu-toggle">[THREAT_LEVEL: EXTREMIS]</label>
-        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+    <nav class="codex-menu">
+        <input type="checkbox" id="ultra-check" class="menu-toggle">
+        <label for="ultra-check" class="menu-header">[!] Threat Index</label>
         <div class="menu-content">
-            <a href="index.html">Home</a>
-            <a href="Roboute Guilliman.html">The Primarch</a>
-            <a href="Companies.html">Companies</a>
-            <a href="enemies.html">Enemies of Utramar</a>
+            <ul>
+                <li><a href="index.html">> Home</a></li>
+                <li><a href="Roboute Guilliman.html">> The Primarch</a></li>
+                <li><a href="Companies.html">> Companies</a></li>
+                <li><a href="enemies.html" class="menu-enemy-link">> Target Database</a></li>
+            </ul>
         </div>
-    </div>
+    </nav>
 
-    <div class="container">
-        <article class="data-slate threat-dossier">
-            <h1>//: HOSTILE_WIKI_DATASLATES :\\</h1>
-            
-            <div class="enemy-entry">
-                <h2>[WORD BEARERS]</h2>
-                <div class="enemy-content">
-                    <img src="images/word-bearers.jpg" class="threat-img">
-                    <div class="threat-data">
-                        <p><strong>LEADERS:</strong> EREBUS / KOR PHAERON</p>
-                        <p><strong>THREAT:</strong> HERETICUS ARCH-TRAITOR</p>
-                        <p><strong>ANALYSIS:</strong> Orchestrators of the Betrayal at Calth. An eternal grudge that fuels the XIII Legion's righteous fury.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="enemy-entry">
-                <h2>[TYRANIDS: HIVE FLEET BEHEMOTH]</h2>
-                <div class="enemy-content">
-                    <img src="images/tyranids.jpg" class="threat-img">
-                    <div class="threat-data">
-                        <p><strong>LEADER:</strong> HIVE MIND GESTALT</p>
-                        <p><strong>THREAT:</strong> XENOS TERMINUS</p>
-                        <p><strong>ANALYSIS:</strong> Annihilators of the 1st Company. Invaders of Macragge. Total biological extinction protocols active.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="enemy-entry">
-                <h2>[IRON WARRIORS]</h2>
-                <div class="enemy-content">
-                    <img src="images/iron-warriors.jpg" class="threat-img">
-                    <div class="threat-data">
-                        <p><strong>LEADER:</strong> PERTURABO</p>
-                        <p><strong>NATURE:</strong> SIEGE SPECIALISTS</p>
-                        <p><strong>THREAT:</strong> HERETICUS MAJORIS</p>
-                        <p><strong>ANALYSIS:</strong> Primary philosophical rivals. A conflict of Fortress vs. Siege that spans millennia.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="enemy-entry">
-                <h2>[DEATH GUARD: PLAGUE GUARD]</h2>
-                <div class="enemy-content">
-                    <img src="images/death-guard.jpg" class="threat-img">
-                    <div class="threat-data">
-                        <p><strong>LEADER:</strong> MORTARION</p>
-                        <p><strong>THREAT:</strong> HERETICUS CONTAMINATUS</p>
-                        <p><strong>ANALYSIS:</strong> Aggressors in the Realm of Ultramar. High-risk biological devastation recorded across 500 worlds.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="enemy-entry">
-                <h2>[EMPEROR'S CHILDREN]</h2>
-                <div class="enemy-content">
-                    <img src="images/emperors-children.jpg" class="threat-img">
-                    <div class="threat-data">
-                        <p><strong>PRIMARCH:</strong> FULGRIM</p>
-                        <p><strong>THREAT:</strong> HERETICUS EXTREMIS</p>
-                        <p><strong>ANALYSIS:</strong> The poisoners of Roboute Guilliman. Retribution is the only acceptable outcome.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="enemy-entry">
-                <h2>[NIGHT LORDS]</h2>
-                <div class="enemy-content">
-                    <img src="images/night-lords.jpg" class="threat-img">
-                    <div class="threat-data">
-                        <p><strong>HISTORY:</strong> DESTRUCTION OF NOSTRAMO</p>
-                        <p><strong>THREAT:</strong> TERROR_CELL_MAXIMUS</p>
-                        <p><strong>ANALYSIS:</strong> A bitter history of asymmetrical warfare and terror tactics. No diplomatic resolution possible.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="enemy-entry">
-                <h2>[ORKS: WAR OF THE BEAST]</h2>
-                <div class="enemy-content">
-                    <img src="images/orks.jpg" class="threat-img">
-                    <div class="threat-data">
-                        <p><strong>CLASSIFICATION:</strong> GREEN_TIDE_XENOS</p>
-                        <p><strong>THREAT:</strong> XENOS_GELSTALT</p>
-                        <p><strong>ANALYSIS:</strong> Massive incursions during the War of the Beast. Significant tactical expenditure required for sector containment.</p>
-                    </div>
-                </div>
-            </div>
-
+    <main class="container freespace">
+        
+        <article class="data-slate">
+            <h1>Hostile Wiki Database</h1>
+            <p class="status-blink" style="color: #ff3333;">>> HIGH THREAT ALERT: MONITORING ACTIVE TRANSMISSIONS</p>
+            <p>Scanning Segmentum... Identifying primary threats to the Realm of Ultramar and the XIII Legion.</p>
         </article>
-    </div>
+
+        <article class="data-slate enemy-entry">
+            <h2>[ WORD BEARERS ]</h2>
+            <div class="enemy-content">
+                <img src="images/word-bearers.jpg" class="threat-img" alt="Word Bearers">
+                <div class="threat-data">
+                    <p><strong>LEADERS:</strong> EREBUS / KOR PHAERON</p>
+                    <p><strong>THREAT:</strong> HERETICUS ARCH-TRAITOR</p>
+                    <p><strong>ANALYSIS:</strong> Orchestrators of the Betrayal at Calth. An eternal grudge that fuels the XIII Legion's righteous fury.</p>
+                </div>
+            </div>
+        </article>
+
+        <article class="data-slate enemy-entry">
+            <h2>[ TYRANIDS: HIVE FLEET BEHEMOTH ]</h2>
+            <div class="enemy-content">
+                <img src="images/tyranids.jpg" class="threat-img" alt="Tyranids">
+                <div class="threat-data">
+                    <p><strong>THREAT:</strong> XENOS TERMINUS</p>
+                    <p><strong>ANALYSIS:</strong> Annihilators of the 1st Company. Invaders of Macragge. Total biological extinction protocols active.</p>
+                </div>
+            </div>
+        </article>
+
+        <article class="data-slate enemy-entry">
+            <h2>[ IRON WARRIORS ]</h2>
+            <div class="enemy-content">
+                <img src="images/iron-warriors.jpg" class="threat-img" alt="Iron Warriors">
+                <div class="threat-data">
+                    <p><strong>NATURE:</strong> SIEGE SPECIALISTS</p>
+                    <p><strong>ANALYSIS:</strong> Primary philosophical rivals. A conflict of Fortress vs. Siege that spans millennia.</p>
+                </div>
+            </div>
+        </article>
+
+        <article class="data-slate enemy-entry">
+            <h2>[ DEATH GUARD ]</h2>
+            <div class="enemy-content">
+                <img src="images/death-guard.jpg" class="threat-img" alt="Death Guard">
+                <div class="threat-data">
+                    <p><strong>LEADER:</strong> MORTARION</p>
+                    <p><strong>ANALYSIS:</strong> Aggressors in the Realm of Ultramar. High-risk biological devastation recorded across 500 worlds.</p>
+                </div>
+            </div>
+        </article>
+
+        <article class="data-slate enemy-entry">
+            <h2>[ EMPEROR'S CHILDREN ]</h2>
+            <div class="enemy-content">
+                <img src="images/emperors-children.jpg" class="threat-img" alt="Emperor's Children">
+                <div class="threat-data">
+                    <p><strong>PRIMARCH:</strong> FULGRIM</p>
+                    <p><strong>ANALYSIS:</strong> The poisoners of Roboute Guilliman. Retribution is the only acceptable outcome.</p>
+                </div>
+            </div>
+        </article>
+
+        <article class="data-slate enemy-entry">
+            <h2>[ NIGHT LORDS ]</h2>
+            <div class="enemy-content">
+                <img src="images/night-lords.jpg" class="threat-img" alt="Night Lords">
+                <div class="threat-data">
+                    <p><strong>HISTORY:</strong> DESTRUCTION OF NOSTRAMO</p>
+                    <p><strong>ANALYSIS:</strong> A bitter history of asymmetrical warfare. No diplomatic resolution possible.</p>
+                </div>
+            </div>
+        </article>
+
+        <article class="data-slate enemy-entry">
+            <h2>[ ORKS: WAR OF THE BEAST ]</h2>
+            <div class="enemy-content">
+                <img src="images/orks.jpg" class="threat-img" alt="Orks">
+                <div class="threat-data">
+                    <p><strong>CLASSIFICATION:</strong> GREEN_TIDE_XENOS</p>
+                    <p><strong>ANALYSIS:</strong> Massive incursions during the War of the Beast. Significant tactical expenditure required.</p>
+                </div>
+            </div>
+        </article>
+
+    </main>
 </body>
 </html>
