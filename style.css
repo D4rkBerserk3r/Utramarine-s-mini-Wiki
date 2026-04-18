@@ -653,6 +653,7 @@ body.bg-enemies .codex-menu {
 body.bg-enemies .menu-header {
     background: rgba(255, 51, 51, 0.1) !important;
     color: #ff3333 !important;
+    border-bottom: #ff3333 !important;
 }
 
 body.bg-enemies .menu-content a {
