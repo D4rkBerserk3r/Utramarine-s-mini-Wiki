@@ -638,12 +638,15 @@ body.bg-enemies .data-slate {
     background: var(--ultra-bg);
 }
 
-body.bg-enemies h1, body.bg-enemies h2, body.bg-enemies h3 {
+body.bg-enemies h1, body.bg-enemies h3 {
     color: #ff3333 !important;
     text-shadow: 0 0 10px #ff3333;
     border-bottom: 1px solid #ff3333 !important;
 }
-
+body.bg-enemies h2 {
+    text-shadow: 0 0 10px #ff3333;
+    border-bottom: 1px solid #ff3333 !important;
+}
 /* 3. The Red Menu */
 body.bg-enemies .codex-menu {
     border: 1px solid #ff3333 !important;
