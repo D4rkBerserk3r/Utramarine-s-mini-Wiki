@@ -616,3 +616,123 @@ body.bg-primarch .target-label {
         opacity: 1;
     }
 }
+
+/* --- ENEMY PAGE HOSTILE OVERRIDE --- */
+
+/* 1. Body and Scanline Variation */
+body.bg-enemies {
+    --ultra-glow: #ff3333; /* Hostile Red */
+    background-color: #0d0000;
+}
+
+body.bg-enemies::before {
+    background: linear-gradient(rgba(18, 0, 0, 0) 50%, rgba(255, 0, 0, 0.05) 50%);
+    background-size: 100% 4px;
+}
+
+/* 2. Warning Splash Screen */
+#notifica-rosso {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: radial-gradient(circle, #2a0000 0%, #000 100%);
+    z-index: 999999;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: 15px solid #ff3333;
+}
+
+.alert-text {
+    font-size: 4rem !important;
+    color: #ff3333 !important;
+    text-shadow: 0 0 20px #ff3333;
+    border: none !important;
+}
+
+.loading-bar-red {
+    width: 300px;
+    height: 3px;
+    background: #110000;
+    border: 1px solid #ff3333;
+    margin: 20px 0;
+}
+
+.loading-bar-red .fill {
+    width: 100%;
+    height: 100%;
+    background: #ff3333;
+    animation: load-warn 1.5s ease-in-out;
+}
+
+/* 3. Data Slate Red Styling */
+body.bg-enemies .data-slate {
+    border: 1px solid #ff3333 !important;
+    box-shadow: 0 0 30px rgba(255, 51, 51, 0.15) !important;
+    background: rgba(15, 0, 0, 0.9);
+}
+
+body.bg-enemies h1 {
+    color: #ff3333 !important;
+    border-bottom: 2px solid #ff3333 !important;
+}
+
+/* 4. Enemy Dossier Layout */
+.enemy-entry {
+    margin-bottom: 60px;
+    border-left: 3px solid #ff3333;
+    padding-left: 25px;
+    position: relative;
+}
+
+.enemy-entry h2 {
+    color: #000 !important;
+    background: #ff3333;
+    display: inline-block;
+    padding: 5px 20px;
+    transform: skew(-15deg);
+    margin-bottom: 20px;
+}
+
+.enemy-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.threat-img {
+    width: 280px;
+    border: 1px solid #ff3333;
+    /* RED TACTICAL FILTER */
+    filter: grayscale(1) sepia(1) hue-rotate(-50deg) brightness(0.7);
+    transition: 0.4s;
+}
+
+.threat-img:hover {
+    filter: grayscale(0) sepia(0) brightness(1);
+    box-shadow: 0 0 15px #ff3333;
+}
+
+.threat-data {
+    flex: 1;
+    min-width: 300px;
+}
+
+.threat-data p {
+    color: #ffb3b3 !important; /* Soft red for easier reading */
+    border-bottom: 1px dashed rgba(255, 51, 51, 0.3);
+    padding-bottom: 10px;
+}
+
+@keyframes load-warn {
+    0% { width: 0; }
+    100% { width: 100%; }
+}
+
+.click-to-proceed {
+    font-size: 0.8rem;
+    letter-spacing: 3px;
+    color: #ff3333;
+}
+
