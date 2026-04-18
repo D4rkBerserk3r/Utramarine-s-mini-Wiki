@@ -736,3 +736,45 @@ body.bg-enemies h1 {
     color: #ff3333;
 }
 
+/* --- UNIVERSAL MENU RULE: THE RED VOICE --- */
+.menu-content a.menu-enemy-link {
+    color: #ff3333 !important;
+    border-left: 3px solid #ff3333;
+    font-weight: bold;
+}
+
+.menu-content a.menu-enemy-link:hover {
+    background: #ff3333 !important;
+    color: #000 !important;
+    box-shadow: 0 0 15px #ff3333 !important;
+}
+
+/* --- THE HOSTILE MENU THEME (When on bg-enemies page) --- */
+body.bg-enemies .codex-menu {
+    border: 1px solid #ff3333 !important;
+    background: rgba(10, 0, 0, 0.95) !important; /* Deep black-red */
+    box-shadow: 0 0 15px rgba(255, 51, 51, 0.4) !important;
+}
+
+body.bg-enemies .menu-header {
+    background: rgba(255, 51, 51, 0.15) !important;
+    color: #ff3333 !important;
+    border-bottom: 1px solid #ff3333 !important;
+}
+
+body.bg-enemies .menu-content a {
+    color: #ff9999; /* Slightly softer red for standard links */
+    border-bottom: 1px solid rgba(255, 51, 51, 0.2);
+}
+
+body.bg-enemies .menu-content a:hover {
+    background: #ff3333 !important;
+    color: #000 !important;
+}
+
+/* Ensure the fourth link stays "Danger Red" even on the enemy page */
+body.bg-enemies .menu-content a.menu-enemy-link {
+    background: rgba(255, 51, 51, 0.1);
+    color: #ff0000 !important;
+    text-shadow: 0 0 5px #ff0000;
+}
