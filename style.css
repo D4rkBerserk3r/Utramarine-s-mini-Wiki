@@ -645,6 +645,7 @@ body.bg-enemies::before {
 }
 
 .alert-text {
+    font-family: var(--ultra-font);
     font-size: 4rem !important;
     color: #ff3333 !important;
     text-shadow: 0 0 20px #ff3333;
@@ -668,12 +669,14 @@ body.bg-enemies::before {
 
 /* 3. Data Slate Red Styling */
 body.bg-enemies .data-slate {
+    font-family: var(--ultra-font);
     border: 1px solid #ff3333 !important;
     box-shadow: 0 0 30px rgba(255, 51, 51, 0.15) !important;
     background: rgba(15, 0, 0, 0.9);
 }
 
 body.bg-enemies h1 {
+    font-family: var(--ultra-font);
     color: #ff3333 !important;
     border-bottom: 2px solid #ff3333 !important;
 }
@@ -687,6 +690,7 @@ body.bg-enemies h1 {
 }
 
 .enemy-entry h2 {
+    font-family: var(--ultra-font);
     color: #000 !important;
     background: #ff3333;
     display: inline-block;
@@ -720,6 +724,7 @@ body.bg-enemies h1 {
 }
 
 .threat-data p {
+    font-family: var(--ultra-font);
     color: #ffb3b3 !important; /* Soft red for easier reading */
     border-bottom: 1px dashed rgba(255, 51, 51, 0.3);
     padding-bottom: 10px;
@@ -738,6 +743,7 @@ body.bg-enemies h1 {
 
 /* --- UNIVERSAL MENU RULE: THE RED VOICE --- */
 .menu-content a.menu-enemy-link {
+    font-family: var(--ultra-font);
     color: #ff3333 !important;
     border-left: 3px solid #ff3333;
     font-weight: bold;
@@ -763,6 +769,7 @@ body.bg-enemies .menu-header {
 }
 
 body.bg-enemies .menu-content a {
+    font-family: var(--ultra-font);
     color: #ff9999; /* Slightly softer red for standard links */
     border-bottom: 1px solid rgba(255, 51, 51, 0.2);
 }
