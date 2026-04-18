@@ -780,3 +780,78 @@ body:not(.bg-enemies) .slate-image-right:hover,
 body:not(.bg-enemies) .mini-card img:hover {
     box-shadow: 0 0 30px rgba(0, 255, 153, 0.6) !important; /* Intense green glow on grow */
 }
+
+/* --- RED MOUSE NAVIGATOR (CLEAN VERSION) --- */
+
+.scroll-to-enemy {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+/* The Mouse Body */
+.mouse-icon-red {
+    width: 20px;
+    height: 32px;
+    border: 2px solid #ff3333;
+    border-radius: 10px;
+    position: relative;
+    background: rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 10px rgba(255, 51, 51, 0.3);
+}
+
+/* The Scrolling Dot */
+.mouse-icon-red::before {
+    content: '';
+    width: 3px;
+    height: 6px;
+    background: #ff3333;
+    position: absolute;
+    left: 50%;
+    top: 6px;
+    transform: translateX(-50%);
+    border-radius: 2px;
+    animation: scroll-red-anim 1.5s infinite;
+    box-shadow: 0 0 5px #ff3333;
+}
+
+/* Navigator Text */
+.scroll-to-enemy span {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 0.65rem;
+    color: #ff3333;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-shadow: 0 0 5px #ff3333;
+}
+
+/* Hover Effects */
+.scroll-to-enemy:hover {
+    transform: translateY(-3px);
+}
+
+.scroll-to-enemy:hover .mouse-icon-red {
+    box-shadow: 0 0 15px #ff3333;
+}
+
+/* Animation Logic */
+@keyframes scroll-red-anim {
+    0% { 
+        opacity: 0; 
+        transform: translateX(-50%) translateY(0); 
+    }
+    30% { 
+        opacity: 1; 
+    }
+    100% { 
+        opacity: 0; 
+        transform: translateX(-50%) translateY(12px); 
+    }
+}
