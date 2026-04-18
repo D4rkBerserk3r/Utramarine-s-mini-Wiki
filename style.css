@@ -775,12 +775,6 @@ body.bg-enemies .threat-img:hover {
     box-shadow: 0 0 30px rgba(255, 51, 51, 0.6) !important; /* Intense red glow on grow */
 }
 
-/* 4. Specific Override for the Primarch/Index Pages (Green Glow) */
-body:not(.bg-enemies) .slate-image-right:hover, 
-body:not(.bg-enemies) .mini-card img:hover {
-    box-shadow: 0 0 30px rgba(0, 255, 153, 0.6) !important; /* Intense green glow on grow */
-}
-
 /* --- RED MOUSE NAVIGATOR (CLEAN VERSION) --- */
 
 .scroll-to-enemy {
