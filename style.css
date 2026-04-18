@@ -765,7 +765,7 @@ body.bg-enemies .menu-content a:hover {
 .slate-image-right:hover, 
 .mini-card img:hover, 
 .threat-img:hover {
-    transform: scale(1.10) translateY(-5px); /* Grows by 10% and lifts slightly */
+    transform: scale(1.20) translateY(-5px); /* Grows by 20% and lifts slightly */
     z-index: 100; /* Ensures it grows ABOVE surrounding text, not behind it */
     position: relative; /* Required for z-index to work on static elements */
 }
