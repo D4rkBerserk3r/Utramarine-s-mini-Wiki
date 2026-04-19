@@ -286,6 +286,7 @@ body.bg-primarch .ultra-table thead th {
 }
 body.bg-primarch .ultra-table td {
 border: 1px solid #005EB8 !important;
+padding: 2px;
 }
 /* Layout Grid */
 .cogitator-grid {
