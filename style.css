@@ -284,7 +284,9 @@ body.bg-primarch .ultra-table thead th {
     background: rgba(0, 94, 184, 0.3);
     border-bottom: 2px solid var(--ultra-gold)!important;
 }
-
+body.bg-primarch .ultra-table td {
+border: 1px solid var(--ultra-blue) !important;
+}
 /* Layout Grid */
 .cogitator-grid {
     display: flex;
